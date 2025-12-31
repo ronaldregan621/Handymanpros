@@ -3,8 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alliance Handyman Pros | Premium TV Mounting & Smart Home Installation | Greenwich, Darien, Westport CT</title>
-    <meta name="description" content="Expert TV mounting, smart home installation & handyman services for Lower Fairfield County. Samsung, LG, Sony TV installation. Same-day service available. Call (475) 500-7126">
+    <title>TV Mounting in Greenwich, Darien, Westport & Stamford CT | Alliance Handyman Pros</title>
+    <link rel="icon" type="image/png" href="/ahp-logo.png">
+    <meta name="description" content="550+ TVs mounted across Fairfield County. Samsung Frame, MantelMount, and OLED specialists. Same-day appointments available 7 days a week. Call (475) 500-7126.">
+    <link rel="canonical" href="https://alliancehandymanpros.com/">
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "HomeAndConstructionBusiness",
+          "name": "Alliance Handyman Pros",
+          "url": "https://alliancehandymanpros.com/",
+          "description": "TV mounting specialists serving Fairfield County. Samsung Frame, MantelMount, and OLED installation experts.",
+          "telephone": "+1-475-500-7126",
+          "areaServed": [
+            { "@type": "City", "name": "Greenwich" },
+            { "@type": "City", "name": "Darien" },
+            { "@type": "City", "name": "Westport" },
+            { "@type": "City", "name": "New Canaan" },
+            { "@type": "City", "name": "Stamford" },
+            { "@type": "City", "name": "Norwalk" },
+            { "@type": "City", "name": "Cos Cob" },
+            { "@type": "City", "name": "Old Greenwich" },
+            { "@type": "City", "name": "Riverside" },
+            { "@type": "City", "name": "Rowayton" },
+            { "@type": "City", "name": "Wilton" },
+            { "@type": "City", "name": "Weston" }
+          ],
+          "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "CT",
+            "addressCountry": "US"
+          },
+          "serviceType": [
+            "TV mounting",
+            "Samsung Frame installation",
+            "MantelMount installation",
+            "OLED TV mounting",
+            "Cable concealment"
+          ]
+        }
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -68,15 +106,28 @@
         }
 
         .logo {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
             color: var(--white);
+            text-decoration: none;
+        }
+
+        .logo img {
+            height: 40px;
+            width: auto;
+            display: block;
+        }
+
+        .logo-text {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
 
-        .logo span {
+        .logo-text span {
             color: var(--orange);
         }
 
@@ -190,12 +241,13 @@
 
         .hero-subtitle {
             font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.9);
             margin-bottom: 2rem;
-            max-width: 600px;
+            max-width: 700px;
             margin-left: auto;
             margin-right: auto;
-            font-weight: 300;
+            font-weight: 400;
+            line-height: 1.7;
             animation: fadeInUp 0.6s ease 0.3s both;
         }
 
@@ -275,6 +327,26 @@
             background: rgba(255,255,255,0.15);
         }
 
+        /* Social Proof Bar */
+        .social-proof {
+            background: var(--dark);
+            padding: 1.5rem 5%;
+            text-align: center;
+        }
+
+        .social-proof-content {
+            color: var(--white);
+            font-family: 'Oswald', sans-serif;
+            font-size: 1rem;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .social-proof-content span {
+            color: var(--orange);
+        }
+
         /* Section Styles */
         .section-tag {
             display: inline-block;
@@ -306,52 +378,37 @@
             font-size: 1.05rem;
         }
 
-        /* Availability / Wherever You Need Us */
-        .availability {
-            padding: 5rem 5%;
+        /* Where We Work */
+        .where-we-work {
+            padding: 6rem 5%;
             background: var(--gray-light);
         }
 
-        .availability-grid {
+        .stories-grid {
             display: grid;
-            grid-template-columns: repeat(2, minmax(0, 1fr));
+            grid-template-columns: repeat(2, 1fr);
             gap: 2rem;
-            max-width: 900px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
-        .availability-card {
+        .story-card {
             background: var(--white);
             border-radius: 16px;
             padding: 2rem;
             box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-            display: flex;
-            flex-direction: column;
-            gap: 0.75rem;
         }
 
-        .availability-label {
-            font-size: 0.8rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: var(--orange);
-        }
-
-        .availability-card h3 {
-            font-size: 1.4rem;
+        .story-card h3 {
+            font-size: 1.3rem;
             color: var(--dark);
+            margin-bottom: 1rem;
         }
 
-        .availability-card p {
+        .story-card p {
+            color: var(--gray);
             font-size: 0.95rem;
-            color: var(--gray);
-        }
-
-        .availability-meta {
-            font-size: 0.85rem;
-            color: var(--gray);
-            margin-top: 0.5rem;
+            line-height: 1.7;
         }
 
         /* Services Section */
@@ -362,7 +419,7 @@
 
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(4, 1fr);
             gap: 2rem;
             max-width: 1200px;
             margin: 0 auto;
@@ -372,7 +429,7 @@
             background: var(--white);
             border: 2px solid var(--gray-light);
             border-radius: 16px;
-            padding: 2.5rem 2rem;
+            padding: 2rem;
             transition: all 0.3s ease;
             position: relative;
         }
@@ -414,41 +471,51 @@
         }
 
         .service-card h3 {
-            font-size: 1.4rem;
+            font-size: 1.2rem;
             color: var(--dark);
             margin-bottom: 0.75rem;
         }
 
         .service-card p {
             color: var(--gray);
-            font-size: 0.95rem;
-            margin-bottom: 1.5rem;
+            font-size: 0.9rem;
             line-height: 1.7;
         }
 
-        .service-card .learn-more {
-            color: var(--orange);
-            font-weight: 600;
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding-top: 1rem;
-            border-top: 1px solid var(--gray-light);
-            transition: gap 0.3s ease;
+        /* Other Services */
+        .other-services {
+            padding: 6rem 5%;
+            background: var(--gray-light);
         }
 
-        .service-card:hover .learn-more {
-            gap: 1rem;
+        .other-services-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .other-service-card {
+            text-align: center;
+        }
+
+        .other-service-card h4 {
+            font-size: 1.1rem;
+            color: var(--dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .other-service-card p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.6;
         }
 
         /* How It Works */
         .how-it-works {
             padding: 6rem 5%;
-            background: var(--gray-light);
+            background: var(--white);
         }
 
         .steps-container {
@@ -503,6 +570,78 @@
         }
 
         .step p {
+            color: var(--gray);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Why Us */
+        .why-us {
+            padding: 6rem 5%;
+            background: var(--gray-light);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 1.5rem;
+        }
+
+        .feature-item h4 {
+            font-size: 1.1rem;
+            color: var(--dark);
+            margin-bottom: 0.75rem;
+        }
+
+        .feature-item p {
+            color: var(--gray);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* Service Areas */
+        .areas {
+            padding: 6rem 5%;
+            background: var(--white);
+        }
+
+        .areas-grid {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            max-width: 900px;
+            margin: 0 auto 1.5rem;
+        }
+
+        .area-tag {
+            background: var(--gray-light);
+            padding: 0.875rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 500;
+            color: var(--dark);
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .area-tag:hover {
+            background: var(--orange);
+            color: var(--white);
+            transform: translateY(-2px);
+        }
+
+        .areas-subtext {
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
             color: var(--gray);
             font-size: 0.95rem;
             line-height: 1.6;
@@ -594,144 +733,11 @@
             border-radius: 50%;
         }
 
-        /* TV Specialists */
-        .tv-specialists {
-            padding: 6rem 5%;
-            background: var(--white);
-        }
-
-        .tv-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 1.5rem;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        .tv-card {
-            background: var(--gray-light);
-            border-radius: 16px;
-            padding: 2rem;
-            text-align: center;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .tv-card:hover {
-            border-color: var(--orange);
-            transform: translateY(-5px);
-        }
-
-        .tv-card .brand {
-            font-size: 0.7rem;
-            color: var(--orange);
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
-        }
-
-        .tv-card h4 {
-            font-size: 1.1rem;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .tv-card .size {
-            font-size: 2.25rem;
-            font-weight: 700;
-            color: var(--orange);
-            font-family: 'Oswald', sans-serif;
-        }
-
-        .tv-card .price {
-            font-size: 0.8rem;
-            color: var(--gray);
-            margin-top: 0.5rem;
-        }
-
-        /* Why Us */
-        .why-us {
-            padding: 6rem 5%;
-            background: var(--gray-light);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .feature-row {
-            display: contents;
-        }
-
-        .feature-item {
-            text-align: center;
-            padding: 1.5rem;
-        }
-
-        .feature-icon {
-            width: 64px;
-            height: 64px;
-            background: var(--cream);
-            border-radius: 16px;
+        .cta-buttons {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1rem;
-        }
-
-        .feature-icon svg {
-            width: 28px;
-            height: 28px;
-            color: var(--orange);
-        }
-
-        .feature-item h4 {
-            font-size: 1rem;
-            color: var(--dark);
-            margin-bottom: 0.5rem;
-        }
-
-        .feature-item p {
-            color: var(--gray);
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        /* Service Areas */
-        .areas {
-            padding: 6rem 5%;
-            background: var(--white);
-        }
-
-        .areas-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
             gap: 1rem;
-            max-width: 900px;
-            margin: 0 auto;
-        }
-
-        .area-tag {
-            background: var(--gray-light);
-            padding: 0.875rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 500;
-            color: var(--dark);
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .area-tag:hover {
-            background: var(--orange);
-            color: var(--white);
-            transform: translateY(-2px);
+            justify-content: center;
+            margin-bottom: 1rem;
         }
 
         /* Footer */
@@ -756,6 +762,20 @@
             font-size: 1rem;
             letter-spacing: 2px;
             text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-phone {
+            color: var(--orange);
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .footer-areas {
+            color: rgba(255,255,255,0.5);
+            font-size: 0.9rem;
+            margin-bottom: 2rem;
         }
 
         .footer-bottom {
@@ -818,16 +838,16 @@
                 grid-template-columns: repeat(2, 1fr);
             }
 
-            .availability-grid {
+            .stories-grid {
                 grid-template-columns: 1fr;
-            }
-
-            .tv-grid {
-                grid-template-columns: repeat(2, 1fr);
             }
 
             .features-grid {
                 grid-template-columns: repeat(2, 1fr);
+            }
+
+            .other-services-grid {
+                grid-template-columns: 1fr;
             }
         }
 
@@ -840,13 +860,12 @@
                 display: flex;
             }
 
-            .services-grid,
-            .tv-grid {
+            .services-grid {
                 grid-template-columns: 1fr;
             }
 
             .features-grid {
-                grid-template-columns: repeat(2, 1fr);
+                grid-template-columns: 1fr;
             }
 
             .steps-container {
@@ -868,7 +887,10 @@
 <body>
     <!-- Navigation -->
     <nav id="navbar">
-        <div class="logo">Alliance <span>Handyman Pros</span></div>
+        <a href="#top" class="logo">
+            <img src="/ahp-logo.png" alt="Alliance Handyman Pros logo">
+            <div class="logo-text">Alliance <span>Handyman Pros</span></div>
+        </a>
         <ul class="nav-links">
             <li><a href="#services">Services</a></li>
             <li><a href="#how-it-works">How It Works</a></li>
@@ -890,19 +912,19 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-badge">
-                <span>Mobile Handyman Service • Lower Fairfield County</span>
+                <span>TV Mounting Specialists • Lower Fairfield County</span>
             </div>
-            <h1>Premium Handyman<br><span class="highlight">Services</span></h1>
-            <p class="hero-tagline">On-Site Repairs & Installations</p>
-            <p class="hero-subtitle">TV mounting, smart home setup, furniture assembly, and punch-list fixes for busy homeowners who want it handled right the first time.</p>
+            <h1>The TV Mounting Pros for <span class="highlight">Fairfield County</span></h1>
+            <p class="hero-tagline">Greenwich • Darien • Westport • New Canaan • Stamford • Norwalk</p>
+            <p class="hero-subtitle">Hi! We're Alliance Handyman Pros, and we've mounted <strong>550+ TVs across Fairfield County</strong>. What started as weekend side jobs quickly grew into what it is today — Samsung Frame installations, MantelMount setups above fireplaces, and OLED panels on everything from drywall to stone. We've been in Harbor Point high-rises, Greenwich waterfront condos, and Darien family rooms.<br><br>Same-day appointments available. 7 days a week. When you call, a real person picks up.</p>
             <div class="hero-features">
                 <div class="hero-feature">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                    Book in 60 Seconds
+                    Fully Insured (Never Had to Use It, Knock on Wood)
                 </div>
                 <div class="hero-feature">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                    Licensed & Insured
+                    Same-Day Available
                 </div>
                 <div class="hero-feature">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
@@ -912,62 +934,97 @@
             <div class="hero-ctas">
                 <a href="tel:+14755007126" class="btn-primary">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-                    Call Now for Service
+                    Call Now — (475) 500-7126
                 </a>
-                <a href="#services" class="btn-secondary">Request a Quote</a>
+                <a href="#services" class="btn-secondary">Book Online</a>
             </div>
-            <p class="hero-phone">(475) 500-7126 • 7 Days a Week</p>
         </div>
     </section>
 
-    <!-- Availability / Wherever You Need Us -->
-    <section class="availability">
+    <!-- Social Proof Bar -->
+    <section class="social-proof">
+        <div class="social-proof-content">
+            <span>550+</span> TVs Mounted | <span>800+</span> Jobs Completed | Serving Greenwich to Stamford | <span>7 Days a Week</span>
+        </div>
+    </section>
+
+    <!-- Where We Work -->
+    <section class="where-we-work">
         <div class="section-header">
-            <span class="section-tag">Wherever You Need Us</span>
-            <h2>Handyman Help On Your Schedule</h2>
-            <p>In-home, on-site handyman services throughout Lower Fairfield County.</p>
+            <span class="section-tag">Where We Work</span>
+            <h2>We've Mounted TVs All Over Fairfield County</h2>
+            <p>From downtown Greenwich condos to Harbor Point high-rises in Stamford, we've been in just about every type of building you can think of.</p>
         </div>
-        <div class="availability-grid">
-            <div class="availability-card">
-                <span class="availability-label">In-Home & On-Site Service</span>
-                <h3>We Come To You</h3>
-                <p>From TV mounting and smart home installs to furniture and fixtures, we handle it all right in your home so you don’t have to lift a finger.</p>
-                <p class="availability-meta">Apartments, condos, single-family homes, and townhomes.</p>
+        <div class="stories-grid">
+            <div class="story-card">
+                <h3>Greenwich</h3>
+                <p>At a waterfront condo on Harbor Drive, we mounted a 75" Samsung Frame above a stone fireplace. The owner wanted it to look like artwork when off, so we did the no-gap mount and ran all cables through the fireplace cavity. Took about two hours, including cleanup. Down the road, a family had us install a MantelMount so they could pull their 65" down for movie nights and tuck it back up when entertaining guests.</p>
             </div>
-            <div class="availability-card">
-                <span class="availability-label">7 Days A Week</span>
-                <h3>Fast, Reliable Scheduling</h3>
-                <p>Need it done this week? We offer same-day and next-day appointments most days so you’re not waiting around for basic fixes.</p>
-                <p class="availability-meta">Real humans, real-time updates, and clear arrival windows.</p>
+            <div class="story-card">
+                <h3>Stamford</h3>
+                <p>We've done tons of work at Harbor Point. At one of the Infinity towers, we mounted an 85" LG OLED in a corner unit with floor-to-ceiling windows overlooking the Sound. Tricky angles with all that glass, but it came out clean. Over at Allure, a resident wanted a Samsung Frame in the master bedroom plus a full surround sound setup in the living room. We knocked it out in one afternoon.</p>
+            </div>
+            <div class="story-card">
+                <h3>Darien</h3>
+                <p>At a colonial on Mansfield Avenue, we did a MantelMount install above an uneven stone fireplace. Had to get creative with the bracket placement since the stone wasn't level, but now it pulls down perfectly to eye level. Another family had us mount three TVs in one visit — 65" in the living room, 55" in the master, and a 43" in the kids' playroom. Done in under four hours.</p>
+            </div>
+            <div class="story-card">
+                <h3>Westport</h3>
+                <p>At a renovation on Compo Road, we mounted a 77" Sony OLED on an exposed brick accent wall. Beautiful old brick, but mounting to it takes patience and the right anchors. No visible wires, perfectly level. Another client wanted their Samsung Frame to blend seamlessly with their gallery wall — it looks like expensive art until you turn it on.</p>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
+    <!-- TV Mounting Services -->
     <section class="services" id="services">
         <div class="section-header">
-            <span class="section-tag">Full Service</span>
-            <h2>Handyman Services We Offer</h2>
-            <p>From quick fixes to premium installs, we bring the tools, parts, and know-how to your doorstep.</p>
+            <span class="section-tag">TV Mounting</span>
+            <h2>TV Mounting Done Right</h2>
+            <p>This is what we do best. Samsung, LG, Sony — mounted on drywall, plaster, brick, stone, or above your fireplace. We show up with the right bracket, the right tools, and we don't leave until it's perfect.</p>
         </div>
         <div class="services-grid">
             <div class="service-card">
+                <div class="service-icon">🖼️</div>
+                <h3>Samsung Frame Installation</h3>
+                <p>The Frame is supposed to look like art when it's off, but only if it's mounted perfectly flush to the wall. We do the no-gap mount, hide the One Connect box somewhere smart, and run all cables invisibly. When it's displaying art, your guests won't know it's a TV. When it's on, it's a gorgeous 4K display. That's the whole point of spending the extra money on a Frame.</p>
+            </div>
+            <div class="service-card">
                 <div class="service-icon">📺</div>
-                <h3>TV Mounting</h3>
-                <p>Samsung, LG, Sony — we mount them all. Clean cable management, perfect positioning, and we clean up after.</p>
-                <a href="#" class="learn-more">Learn More <span>→</span></a>
+                <h3>MantelMount Installation</h3>
+                <p>Got a fireplace where the TV would be way too high? The MantelMount is a game changer. Pull it down to perfect viewing height when you're watching, push it back up when you're done. We've installed dozens of these — they're perfect for those tall fireplace situations where a regular mount just doesn't work.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🏠</div>
-                <h3>Smart Home Setup</h3>
-                <p>Nest thermostats, Ring doorbells, Ecobee, smart locks. We set it up and show you how it works.</p>
-                <a href="#" class="learn-more">Learn More <span>→</span></a>
+                <div class="service-icon">📱</div>
+                <h3>OLED & Large Format TVs</h3>
+                <p>LG OLED, Sony Bravia, Samsung Neo QLED — these are expensive TVs that need to be mounted right the first time. We use heavy-duty anchors, hit the studs, and make sure it's rock solid. 65", 75", 77", 85" — we've mounted them all. Your $3,000 TV deserves better than a wobbly mount from the big box store.</p>
             </div>
             <div class="service-card">
-                <div class="service-icon">🛋️</div>
-                <h3>Furniture Assembly</h3>
-                <p>IKEA, Wayfair, Pottery Barn, RH. Save your weekend — we'll have it built in no time.</p>
-                <a href="#" class="learn-more">Learn More <span>→</span></a>
+                <div class="service-icon">🔌</div>
+                <h3>Cable Concealment</h3>
+                <p>Nobody wants to see a mess of cables hanging below their beautiful mounted TV. We run power and HDMI through the wall when possible, install outlets behind the TV, and use paintable cord covers when in-wall isn't doable. Clean lines, no visible wires, no mess.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Other Services -->
+    <section class="other-services">
+        <div class="section-header">
+            <span class="section-tag">Other Services</span>
+            <h2>More Than Just TVs</h2>
+            <p>TV mounting is our specialty, but we handle the other stuff too.</p>
+        </div>
+        <div class="other-services-grid">
+            <div class="other-service-card">
+                <h4>Smart Home Setup</h4>
+                <p>Nest thermostats, Ring doorbells, smart locks, security cameras. We install it, connect it to your WiFi, and actually show you how to use the app before we leave. No YouTube tutorials required.</p>
+            </div>
+            <div class="other-service-card">
+                <h4>Furniture Assembly</h4>
+                <p>IKEA, Wayfair, Pottery Barn, West Elm — save your Saturday (and your sanity). We'll have it built and positioned exactly where you want it. Life's too short for confusing instruction manuals.</p>
+            </div>
+            <div class="other-service-card">
+                <h4>Shelves, Art & Mirrors</h4>
+                <p>Floating shelves, gallery walls, heavy mirrors, that oversized piece you've been afraid to hang. We find the studs, use the right anchors, and make sure it's perfectly level. No crooked art on our watch.</p>
             </div>
         </div>
     </section>
@@ -975,72 +1032,24 @@
     <!-- How It Works -->
     <section class="how-it-works" id="how-it-works">
         <div class="section-header">
-            <span class="section-tag">Simple as 1-2-3</span>
-            <h2>How It Works</h2>
-            <p>Book in 60 seconds, we show up on time, job done right.</p>
+            <span class="section-tag">Process</span>
+            <h2>Simple as It Gets</h2>
         </div>
         <div class="steps-container">
             <div class="step">
                 <div class="step-number">1</div>
-                <h4>Book in 60 Seconds</h4>
-                <p>Call or text us. Tell us what you need and where you are. We'll lock in your time right then.</p>
+                <h4>Call or Text Us</h4>
+                <p>Tell us what you need mounted and where you are. We'll give you a price right over the phone and lock in your appointment. Takes about 60 seconds.</p>
             </div>
             <div class="step">
                 <div class="step-number">2</div>
-                <h4>We Show Up On Time</h4>
-                <p>Our pro arrives at your door ready to work. No waiting around, no excuses.</p>
+                <h4>We Show Up When We Say We Will</h4>
+                <p>No four-hour windows or "sometime between 10 and 6" nonsense. We give you a real time window and stick to it. Our tech shows up ready to work.</p>
             </div>
             <div class="step">
                 <div class="step-number">3</div>
-                <h4>Job Done Right</h4>
-                <p>We complete the work, clean up after ourselves, and make sure you're 100% happy.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Banner -->
-    <section class="cta-banner">
-        <h2>Need Something Handled?</h2>
-        <p>Give us a call and talk to a real person. No phone trees, no waiting.</p>
-        <p class="subtext">We're here 7 days a week ready to help.</p>
-        <a href="tel:+14755007126" class="phone-btn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-            (475) 500-7126
-        </a>
-        <div class="cta-note">Book in under 60 seconds</div>
-    </section>
-
-    <!-- TV Specialists -->
-    <section class="tv-specialists">
-        <div class="section-header">
-            <span class="section-tag">TV Specialists</span>
-            <h2>Premium TV Mounting</h2>
-            <p>We specialize in mounting high-end televisions with precision and care.</p>
-        </div>
-        <div class="tv-grid">
-            <div class="tv-card">
-                <span class="brand">Samsung</span>
-                <h4>S95F OLED</h4>
-                <div class="size">77"</div>
-                <span class="price">TV Price: ~$3,500</span>
-            </div>
-            <div class="tv-card">
-                <span class="brand">LG</span>
-                <h4>G5 OLED</h4>
-                <div class="size">77"</div>
-                <span class="price">TV Price: ~$3,500</span>
-            </div>
-            <div class="tv-card">
-                <span class="brand">Sony</span>
-                <h4>Bravia 8 II</h4>
-                <div class="size">77"</div>
-                <span class="price">TV Price: ~$3,500</span>
-            </div>
-            <div class="tv-card">
-                <span class="brand">Samsung</span>
-                <h4>Frame Pro</h4>
-                <div class="size">75"</div>
-                <span class="price">TV Price: ~$2,000</span>
+                <h4>Job Done Right, Mess Cleaned Up</h4>
+                <p>We mount your TV, test everything, clean up our mess, and make sure you're happy with the work before we pack up and head out.</p>
             </div>
         </div>
     </section>
@@ -1048,51 +1057,25 @@
     <!-- Why Us -->
     <section class="why-us" id="about">
         <div class="section-header">
-            <span class="section-tag">Why Homeowners Trust Us</span>
-            <h2>The Alliance Difference</h2>
+            <span class="section-tag">Why Choose Us</span>
+            <h2>Why People Call Us Back</h2>
         </div>
         <div class="features-grid">
             <div class="feature-item">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12,6 12,12 16,14"/></svg>
-                </div>
-                <h4>Quality of Work</h4>
-                <p>Experienced handymen who know how to work in high-end homes, with clean finishes every time.</p>
+                <h4>We Treat Your Home Like Our Own</h4>
+                <p>Shoe covers, drop cloths, furniture protection — we treat every home like it's our grandmother's house. We're careful with your stuff and we clean up our mess before we leave. You shouldn't have to vacuum after we're done.</p>
             </div>
             <div class="feature-item">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21,15 16,10 5,21"/></svg>
-                </div>
-                <h4>Attention To Detail</h4>
-                <p>We measure twice, protect your space, and leave everything cleaner than we found it.</p>
+                <h4>We Actually Show Up When We Say We Will</h4>
+                <p>You've probably been burned by a handyman who never called back. We answer our phone, confirm appointments the day before, and show up on time. Revolutionary concept, we know.</p>
             </div>
             <div class="feature-item">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                </div>
-                <h4>Transparency & Honesty</h4>
-                <p>Upfront pricing, clear scopes, and no surprise add-ons once we’re on site.</p>
+                <h4>No Surprise Charges</h4>
+                <p>We quote the job upfront and stick to it. No "well, actually" moments once we see your setup. No hidden fees for "difficult mounting conditions." The price we quote is what you pay.</p>
             </div>
             <div class="feature-item">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13,2 3,14 12,14 11,22 21,10 12,10 13,2"/></svg>
-                </div>
-                <h4>Speed & Efficiency</h4>
-                <p>Same-day and next-day slots available most days so small projects don’t drag out.</p>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
-                </div>
-                <h4>Always Responsive</h4>
-                <p>When you call, a real person answers and keeps you updated from booking to completion.</p>
-            </div>
-            <div class="feature-item">
-                <div class="feature-icon">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a4 4 0 0 1-4 4H7l-4 4V5a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4z"/></svg>
-                </div>
-                <h4>Satisfaction Guaranteed</h4>
-                <p>If something isn’t right, we come back and make it right. Simple as that.</p>
+                <h4>Same-Day Service Available</h4>
+                <p>Got a new TV sitting in the box and need it up today? Call us. We keep same-day slots open because sometimes you just need it handled right now. Life's too short to stare at a TV on the floor.</p>
             </div>
         </div>
     </section>
@@ -1101,8 +1084,7 @@
     <section class="areas" id="areas">
         <div class="section-header">
             <span class="section-tag">Service Areas</span>
-            <h2>Proudly Serving Lower Fairfield County</h2>
-            <p>Premium handyman services throughout Connecticut's Gold Coast.</p>
+            <h2>Towns We Serve</h2>
         </div>
         <div class="areas-grid">
             <span class="area-tag">Greenwich</span>
@@ -1118,16 +1100,39 @@
             <span class="area-tag">Wilton</span>
             <span class="area-tag">Weston</span>
         </div>
+        <p class="areas-subtext">
+            Based in Lower Fairfield County. If you're nearby, we can get to you.
+        </p>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <h2>Ready to Get It Done?</h2>
+        <p>Call or text us. A real person will pick up and help you book the right appointment.</p>
+        <p class="subtext">7 days a week • Same-day appointments available</p>
+        <div class="cta-buttons">
+            <a href="tel:+14755007126" class="phone-btn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                Call Now
+            </a>
+            <a href="#services" class="btn-secondary">Book Online</a>
+        </div>
+        <div class="phone-btn" style="background: transparent; color: var(--white); font-size: 1.2rem; padding: 0; margin: 0;">(475) 500-7126</div>
     </section>
 
     <!-- Footer -->
     <footer>
         <div class="footer-brand">
-            <div class="logo">Alliance <span>Handyman Pros</span></div>
-            <p class="footer-tagline">Handyman services that actually make sense</p>
+            <a href="#top" class="logo">
+                <img src="/ahp-logo.png" alt="Alliance Handyman Pros logo">
+                <div class="logo-text">Alliance <span>Handyman Pros</span></div>
+            </a>
+            <p class="footer-tagline">The TV Mounting Pros for Fairfield County</p>
+            <p class="footer-phone">(475) 500-7126</p>
+            <p class="footer-areas">Greenwich • Darien • Westport • New Canaan • Stamford • Norwalk • Cos Cob • Old Greenwich • Riverside • Rowayton • Wilton • Weston</p>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Alliance Handyman Pros. All rights reserved. Serving Greenwich, Darien, Westport, New Canaan & Lower Fairfield County.</p>
+            <p>&copy; 2025 Alliance Handyman Pros. All rights reserved. Insured.</p>
         </div>
     </footer>
 
