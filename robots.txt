@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+Disallow: /location-template.html
+Disallow: /alliance-handyman-pros-v2.html
+
+Sitemap: https://www.alliancehandymanpros.com/sitemap.xml
+
+
