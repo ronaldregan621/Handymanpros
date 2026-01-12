@@ -38,6 +38,9 @@
     .logo-text{font-family:'Oswald',sans-serif;font-size:1.2rem;font-weight:700;text-transform:uppercase;letter-spacing:2px}
     .logo-text span{color:var(--orange)}
     .nav-cta{background:var(--orange);color:var(--white);padding:.875rem 1.5rem;border-radius:50px;text-decoration:none;font-weight:600;font-size:.85rem;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap}
+    .nav-ctas{display:flex;align-items:center;gap:.75rem}
+    .nav-cta.nav-cta-secondary{background:rgba(255,255,255,.1);border:2px solid rgba(255,255,255,.3)}
+    .nav-cta.nav-cta-secondary:hover{border-color:rgba(255,255,255,.6);background:rgba(255,255,255,.15)}
     .nav-cta:hover{background:#ea580c}
 
     .breadcrumbs{max-width:1100px;margin:1.25rem auto 0;padding:0 5%;color:var(--gray);font-size:.95rem}
@@ -78,7 +81,10 @@
       <img src="/ahp-logo.png" alt="Alliance Handyman Pros logo">
       <div class="logo-text">Alliance <span>Handyman Pros</span></div>
     </a>
-    <a href="tel:+14755007126" class="nav-cta">Call Now</a>
+    <div class="nav-ctas">
+        <a href="https://widget.zenbooker.com/book/allaincehandymanpros" class="nav-cta nav-cta-secondary" target="_blank" rel="noopener">Instant Quote</a>
+        <a href="tel:+14755007126" class="nav-cta">Call Now</a>
+    </div>
   </nav>
 
   <div class="breadcrumbs" aria-label="Breadcrumb">
