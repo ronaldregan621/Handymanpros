@@ -3,11 +3,19 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- TEMPLATE NOTE: This file is reusable. Either (A) set data-town/data-state above, or (B) use ?town=Greenwich&state=CT -->
-  <title>TV Mounting in {{TOWN}}, {{STATE}} | Alliance Handyman Pros</title>
+  <!-- TEMPLATE NOTE: This file is reusable. You can (A) copy it into /tv-mounting-<town>-ct/index.html or (B) preview with ?slug=tv-mounting-greenwich-ct -->
+  <title data-seo="title">TV Mounting {{TOWN}} CT | Professional TV Installer {{TOWN}}</title>
   <link rel="icon" type="image/png" href="/ahp-logo.png">
-  <meta name="description" content="TV mounting in {{TOWN}}, {{STATE}}. Samsung Frame and OLED specialists. Same-day appointments available 7 days a week. Call (475) 500-7126.">
-  <link rel="canonical" href="https://alliancehandymanpros.com/{{SLUG}}/" data-canonical>
+  <meta name="description" content="TV mounting service {{TOWN}} CT, Samsung Frame installation {{TOWN}}, above fireplace TV mounting {{TOWN}}, same-day service." data-seo="description">
+  <link rel="canonical" href="https://www.alliancehandymanpros.com/tv-mounting-{{SLUG}}-ct/" data-seo="canonical">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Alliance Handyman Pros">
+  <meta property="og:title" content="" data-seo="ogTitle">
+  <meta property="og:description" content="" data-seo="ogDescription">
+  <meta property="og:url" content="" data-seo="ogUrl">
+  <meta property="og:image" content="" data-seo="ogImage">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -580,46 +588,60 @@
     });
 
     // --- Template dynamic bits ---
-    // Use querystring, or the <html data-town/data-state> attributes.
+    // SEO + town/state data comes from /locations.json.
+    // Determine slug from URL path (recommended) or from ?slug=tv-mounting-greenwich-ct
     (function () {
-      const htmlEl = document.documentElement;
       const params = new URLSearchParams(window.location.search);
-      const town = (params.get('town') || htmlEl.dataset.town || '').trim() || 'Your Town';
-      const state = (params.get('state') || htmlEl.dataset.state || '').trim() || 'CT';
 
-      document.querySelectorAll('[data-town]').forEach(el => el.textContent = town);
-      document.querySelectorAll('[data-state]').forEach(el => el.textContent = state);
-
-      // Title/meta (safe defaults)
-      document.title = `TV Mounting in ${town}, ${state} | Alliance Handyman Pros`;
-      const metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc) metaDesc.setAttribute('content', `TV mounting in ${town}, ${state}. Samsung Frame and OLED specialists. Same-day appointments available 7 days a week. Call (475) 500-7126.`);
-
-      // Canonical (remove querystring)
-      const canonical = document.querySelector('link[rel="canonical"][data-canonical]');
-      if (canonical) canonical.setAttribute('href', window.location.origin + window.location.pathname);
-
-      // Nearby towns: edit this list per town OR drive from querystring later.
-      // PLACEHOLDER: Replace towns/links for each location page.
-      const nearby = [
-        { name: 'Greenwich', href: '/tv-mounting-greenwich-ct.html' },
-        { name: 'Darien', href: '/tv-mounting-darien-ct.html' },
-        { name: 'Westport', href: '/tv-mounting-westport-ct.html' },
-        { name: 'New Canaan', href: '/tv-mounting-new-canaan-ct.html' },
-        { name: 'Stamford', href: '/tv-mounting-stamford-ct.html' },
-        { name: 'Norwalk', href: '/tv-mounting-norwalk-ct.html' }
-      ];
-
-      const nearbyWrap = document.getElementById('nearbyLinks');
-      if (nearbyWrap) {
-        nearbyWrap.innerHTML = '';
-        nearby.forEach(t => {
-          const a = document.createElement('a');
-          a.href = t.href;
-          a.textContent = t.name;
-          nearbyWrap.appendChild(a);
-        });
+      function slugFromPathname(pathname) {
+        const cleaned = (pathname || '/').replace(/\\/+$/, '');
+        const last = cleaned.split('/').filter(Boolean).pop() || '';
+        return last.replace(/\\.html$/i, '');
       }
+
+      const slug = (params.get('slug') || slugFromPathname(window.location.pathname) || '').trim();
+
+      function applySeo(seo) {
+        if (!seo) return;
+        if (seo.title) document.title = seo.title;
+        const metaDesc = document.querySelector('meta[name="description"][data-seo="description"]');
+        if (metaDesc && seo.description) metaDesc.setAttribute('content', seo.description);
+        const canonical = document.querySelector('link[rel="canonical"][data-seo="canonical"]');
+        if (canonical && seo.canonical) canonical.setAttribute('href', seo.canonical);
+
+        const ogTitle = document.querySelector('meta[property="og:title"][data-seo="ogTitle"]');
+        if (ogTitle && seo.ogTitle) ogTitle.setAttribute('content', seo.ogTitle);
+        const ogDesc = document.querySelector('meta[property="og:description"][data-seo="ogDescription"]');
+        if (ogDesc && seo.ogDescription) ogDesc.setAttribute('content', seo.ogDescription);
+        const ogUrl = document.querySelector('meta[property="og:url"][data-seo="ogUrl"]');
+        if (ogUrl && seo.ogUrl) ogUrl.setAttribute('content', seo.ogUrl);
+        const ogImage = document.querySelector('meta[property="og:image"][data-seo="ogImage"]');
+        if (ogImage && seo.ogImage) ogImage.setAttribute('content', seo.ogImage);
+      }
+
+      function applyTownState(town, state) {
+        const t = (town || 'Your Town').trim() || 'Your Town';
+        const s = (state || 'CT').trim() || 'CT';
+        document.querySelectorAll('[data-town]').forEach(el => el.textContent = t);
+        document.querySelectorAll('[data-state]').forEach(el => el.textContent = s);
+      }
+
+      fetch('/locations.json')
+        .then(r => r.ok ? r.json() : Promise.reject(new Error('Failed to load locations.json')))
+        .then(map => {
+          const record = map[slug];
+          if (!record) {
+            // Fallback: allow quick preview using ?town=&state= when slug isn't set up yet.
+            applyTownState(params.get('town'), params.get('state'));
+            return;
+          }
+          applyTownState(record.town, record.state);
+          applySeo(record.seo);
+        })
+        .catch(() => {
+          // Basic fallback if the JSON can't load (shouldn't happen on prod).
+          applyTownState(params.get('town'), params.get('state'));
+        });
     })();
   </script>
 </body>
