@@ -1,0 +1,124 @@
+[
+  {
+    "slug": "greenwich",
+    "name": "Greenwich",
+    "state": "CT",
+    "phone": "(475) 500-7126",
+    "neighborhoods": ["Harbor Drive", "Central Greenwich", "Belle Haven"],
+    "homeTypes": ["waterfront condos", "classic colonials", "estate homes"],
+    "nearbyTowns": ["Stamford", "Cos Cob", "Old Greenwich"],
+    "coordinates": { "lat": 41.0262, "lng": -73.6282 }
+  },
+  {
+    "slug": "darien",
+    "name": "Darien",
+    "state": "CT",
+    "phone": "(475) 500-7126",
+    "neighborhoods": ["Noroton Heights", "Tokeneke", "Downtown Darien"],
+    "homeTypes": ["classic colonials", "coastal homes", "new builds"],
+    "nearbyTowns": ["Norwalk", "New Canaan", "Stamford"],
+    "coordinates": { "lat": 41.0787, "lng": -73.4693 }
+  },
+  {
+    "slug": "westport",
+    "name": "Westport",
+    "state": "CT",
+    "phone": "(475) 500-7126",
+    "neighborhoods": ["Saugatuck", "Greens Farms", "Compo Beach"],
+    "homeTypes": ["modern homes", "renovated colonials", "coastal properties"],
+    "nearbyTowns": ["Weston", "Wilton", "Norwalk"],
+    "coordinates": { "lat": 41.1415, "lng": -73.3579 }
+  },
+  {
+    "slug": "stamford",
+    "name": "Stamford",
+    "state": "CT",
+    "phone": "(475) 500-7126",
+    "neighborhoods": ["Harbor Point", "Shippan Point", "Glenbrook"],
+    "homeTypes": ["high-rise condos", "single-family homes", "townhomes"],
+    "nearbyTowns": ["Greenwich", "Darien", "New Canaan"],
+    "coordinates": { "lat": 41.0534, "lng": -73.5387 }
+  },
+  {
+    "slug": "norwalk",
+    "name": "Norwalk",
+    "state": "CT",
+    "phone": "(475) 500-7126",
+    "neighborhoods": ["South Norwalk (SoNo)", "East Norwalk", "Cranbury"],
+    "homeTypes": ["condos", "classic colonials", "coastal homes"],
+    "nearbyTowns": ["Westport", "Darien", "Rowayton"],
+    "coordinates": { "lat": 41.1177, "lng": -73.4082 }
+  },
+  {
+    "slug": "new-canaan",
+    "name": "New Canaan",
+    "state": "CT",
+    "phone": "(475) 500-7126",
+    "neighborhoods": ["Downtown New Canaan", "Waveny", "Silvermine"],
+    "homeTypes": ["estate homes", "classic colonials", "modern homes"],
+    "nearbyTowns": ["Stamford", "Darien", "Wilton"],
+    "coordinates": { "lat": 41.1468, "lng": -73.4948 }
+  },
+  {
+    "slug": "cos-cob",
+    "name": "Cos Cob",
+    "state": "CT",
+    "phone": "(475) 500-7126",
+    "neighborhoods": ["Cos Cob Harbor", "Strickland Brook", "Bible Street"],
+    "homeTypes": ["waterfront homes", "classic colonials", "condos"],
+    "nearbyTowns": ["Greenwich", "Old Greenwich", "Riverside"],
+    "coordinates": { "lat": 41.0384, "lng": -73.5943 }
+  },
+  {
+    "slug": "old-greenwich",
+    "name": "Old Greenwich",
+    "state": "CT",
+    "phone": "(475) 500-7126",
+    "neighborhoods": ["Tod's Point", "Sound Beach Avenue", "Old Greenwich Village"],
+    "homeTypes": ["coastal homes", "classic colonials", "waterfront condos"],
+    "nearbyTowns": ["Riverside", "Cos Cob", "Greenwich"],
+    "coordinates": { "lat": 41.0226, "lng": -73.5657 }
+  },
+  {
+    "slug": "riverside",
+    "name": "Riverside",
+    "state": "CT",
+    "phone": "(475) 500-7126",
+    "neighborhoods": ["Riverside Avenue", "Binney Park", "Indian Harbor"],
+    "homeTypes": ["waterfront homes", "classic colonials", "modern renovations"],
+    "nearbyTowns": ["Old Greenwich", "Cos Cob", "Greenwich"],
+    "coordinates": { "lat": 41.0343, "lng": -73.5887 }
+  },
+  {
+    "slug": "rowayton",
+    "name": "Rowayton",
+    "state": "CT",
+    "phone": "(475) 500-7126",
+    "neighborhoods": ["Rowayton Village", "Five Mile River", "Roton Point"],
+    "homeTypes": ["coastal homes", "renovated colonials", "waterfront properties"],
+    "nearbyTowns": ["Norwalk", "Darien", "Westport"],
+    "coordinates": { "lat": 41.0770, "lng": -73.4565 }
+  },
+  {
+    "slug": "wilton",
+    "name": "Wilton",
+    "state": "CT",
+    "phone": "(475) 500-7126",
+    "neighborhoods": ["Wilton Center", "South Wilton", "Silvermine"],
+    "homeTypes": ["classic colonials", "new builds", "estate homes"],
+    "nearbyTowns": ["Weston", "New Canaan", "Norwalk"],
+    "coordinates": { "lat": 41.1954, "lng": -73.4379 }
+  },
+  {
+    "slug": "weston",
+    "name": "Weston",
+    "state": "CT",
+    "phone": "(475) 500-7126",
+    "neighborhoods": ["Weston Center", "Aspetuck Valley", "Lyons Plain"],
+    "homeTypes": ["estate homes", "classic colonials", "modern homes"],
+    "nearbyTowns": ["Westport", "Wilton", "Norwalk"],
+    "coordinates": { "lat": 41.2000, "lng": -73.3815 }
+  }
+]
+
+
