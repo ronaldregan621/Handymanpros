@@ -94,7 +94,7 @@
     .nav-links a{color:var(--white);text-decoration:none;font-size:.85rem;font-weight:500;letter-spacing:1px;text-transform:uppercase;transition:color .3s ease}
     .nav-links a:hover{color:var(--orange)}
     .nav-cta{background:var(--orange);color:var(--white);padding:.875rem 1.5rem;border-radius:50px;text-decoration:none;font-weight:600;font-size:.85rem;letter-spacing:.5px;text-transform:uppercase;transition:all .3s ease;display:flex;align-items:center;gap:.5rem;white-space:nowrap}
-    .nav-ctas{display:flex;align-items:center;gap:.75rem}
+    .nav-ctas{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;justify-content:flex-end;}
     .nav-cta.nav-cta-secondary{background:var(--white);color:var(--orange);border:2px solid rgba(255,255,255,.65)}
     .nav-cta.nav-cta-secondary:hover{background:rgba(255,255,255,.92);transform:scale(1.02)}
     .nav-cta:hover{background:#ea580c;transform:scale(1.02)}
@@ -181,6 +181,14 @@
     .nearby-note{max-width:900px;margin:1.75rem auto 0;color:var(--gray);font-size:1rem;text-align:center}
     .nearby-note a{color:var(--orange);text-decoration:none;font-weight:700}
     .nearby-note a:hover{text-decoration:underline}
+  
+    /* Mobile nav tightening */
+    @media (max-width: 768px){
+      .nav-ctas{gap:.5rem}
+      .nav-cta{padding:.65rem 1rem;font-size:.75rem}
+      .nav-cta svg{display:none}
+      .mobile-menu-btn{display:none !important}
+    }
   </style>
 </head>
 <body>

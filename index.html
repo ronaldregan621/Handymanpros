@@ -166,7 +166,7 @@
             gap: 0.5rem;
         }
 
-    .nav-ctas{display:flex;align-items:center;gap:.75rem}
+    .nav-ctas{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;justify-content:flex-end;}
     .nav-cta.nav-cta-secondary{background:var(--white);color:var(--orange);border:2px solid rgba(255,255,255,.65)}
     .nav-cta.nav-cta-secondary:hover{background:rgba(255,255,255,.92);transform:scale(1.02)}
         .nav-cta:hover {
@@ -890,7 +890,15 @@
                 gap: 1rem;
             }
         }
-    </style>
+    
+    /* Mobile nav tightening */
+    @media (max-width: 768px){
+      .nav-ctas{gap:.5rem}
+      .nav-cta{padding:.65rem 1rem;font-size:.75rem}
+      .nav-cta svg{display:none}
+      .mobile-menu-btn{display:none !important}
+    }
+  </style>
 </head>
 <body>
     <!-- Navigation -->
