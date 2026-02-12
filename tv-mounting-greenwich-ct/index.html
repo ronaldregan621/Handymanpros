@@ -41,6 +41,11 @@
       "name": "Alliance Handyman Pros - TV Mounting Greenwich",
       "url": "https://www.alliancehandymanpros.com/tv-mounting-greenwich-ct/",
       "telephone": "+1-475-500-7126",
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "3"
+      },
       "areaServed": {
         "@type": "City",
         "name": "Greenwich",
@@ -220,6 +225,7 @@
 
     .mobile-menu-btn { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 10px; }
     .mobile-menu-btn span { width: 25px; height: 2px; background: var(--white); }
+    .mobile-menu-btn .menu-icon { font-size: 1.4rem; color: var(--white); line-height: 1; }
 
     /* Hero */
     .hero {
@@ -247,6 +253,17 @@
     .hero-badge span { color: var(--white); font-size: 0.8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
     .hero h1 { font-size: clamp(2.6rem, 7vw, 5rem); color: var(--white); margin-bottom: 0.75rem; }
     .hero h1 .highlight { color: var(--orange); }
+    .hero-trust {
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+      align-items: center;
+      margin-bottom: 1.25rem;
+      color: rgba(255,255,255,0.9);
+      font-size: 0.95rem;
+    }
+    .hero-trust .stars { color: #fbbf24; font-weight: 700; letter-spacing: 0.5px; }
+    .hero-trust .badges { color: rgba(255,255,255,0.85); font-size: 0.9rem; }
     .hero-tagline {
       font-family: 'Oswald', sans-serif;
       font-size: clamp(1.1rem, 2.6vw, 1.5rem);
@@ -463,6 +480,26 @@
       .step:not(:last-child)::after { display: none; }
     }
 
+    .nav-open .nav-links {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: var(--dark);
+      padding: 1rem 5% 1.5rem;
+    }
+    .nav-open .nav-ctas {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+      width: 100%;
+      padding: 0.5rem 5% 1rem;
+      background: var(--dark);
+    }
+
     /* Breadcrumbs */
     .breadcrumbs {
       max-width: 1100px;
@@ -484,7 +521,6 @@
       .nav-ctas{gap:.5rem}
       .nav-cta{padding:.65rem 1rem;font-size:.75rem}
       .nav-cta svg{display:none}
-      .mobile-menu-btn{display:none !important}
     }
   </style>
 </head>
@@ -513,12 +549,12 @@
         <a href="https://widget.zenbooker.com/book/allaincehandymanpros" class="nav-cta nav-cta-secondary" target="_blank" rel="noopener">Instant Quote</a>
         <a href="tel:+14755007126" class="nav-cta">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-      Call Now for Service
+      Book Now
     </a>
     </div>
-    <div class="mobile-menu-btn" aria-label="Open menu">
-      <span></span><span></span><span></span>
-    </div>
+    <button class="mobile-menu-btn" type="button" aria-label="Toggle menu">
+      <span class="menu-icon" aria-hidden="true">☰</span>
+    </button>
   </nav>
 
   <!-- HERO -->
@@ -528,6 +564,10 @@
         <span>Greenwich, Connecticut</span>
       </div>
       <h1>TV Mounting in <span class="highlight">Greenwich, CT</span></h1>
+      <div class="hero-trust">
+        <div class="stars">⭐⭐⭐⭐⭐ 5.0 (3 Google Reviews)</div>
+        <div class="badges">Licensed &amp; Insured • Background checked • Same Day Service Available</div>
+      </div>
       <p class="hero-tagline">Samsung Frame and OLED Specialists</p>
       <p class="hero-subtitle">
         If you're looking for <strong>TV mounting Greenwich CT</strong> homeowners can trust, you're in the right place. We mount TVs in classic colonials, estate properties, and modern waterfront condos. We work in central Greenwich family homes all the time, and we also handle tight condo layouts along Harbor Drive near the water.
@@ -736,6 +776,7 @@
         (475) 500-7126
       </a>
       <a href="https://widget.zenbooker.com/book/allaincehandymanpros" class="btn-secondary" target="_blank" rel="noopener">Book Online</a>
+      <a href="https://share.google/LI7Td8qysQsOgzbYm" class="btn-secondary" target="_blank" rel="noopener">Read Our Google Reviews →</a>
     </div>
   </section>
 
@@ -766,6 +807,11 @@
       </a>
       <p class="footer-tagline">TV Mounting Specialists</p>
     </div>
+    <div class="business-info" style="text-align:center;color:rgba(255,255,255,0.7);line-height:1.6;">
+      <div>Alliance Handyman Pros</div>
+      <div>Serving Greenwich, CT &amp; Fairfield County</div>
+      <div><a href="tel:4755007126" style="color:var(--orange);text-decoration:none;">(475) 500-7126</a></div>
+    </div>
     <div class="footer-bottom">
       <p>&copy; 2026 Alliance Handyman Pros. All rights reserved. Insured.</p>
     </div>
@@ -777,6 +823,22 @@
       if (window.scrollY > 50) navbar.classList.add('scrolled');
       else navbar.classList.remove('scrolled');
     });
+
+    (function () {
+      const navbar = document.getElementById('navbar');
+      const menuBtn = document.querySelector('.mobile-menu-btn');
+      if (!menuBtn || !navbar) return;
+
+      menuBtn.addEventListener('click', function () {
+        navbar.classList.toggle('nav-open');
+      });
+
+      navbar.querySelectorAll('.nav-links a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          navbar.classList.remove('nav-open');
+        });
+      });
+    })();
 
     // Dynamic SEO from /locations.json using slug derived from path: /tv-mounting-greenwich-ct/
     (function () {
