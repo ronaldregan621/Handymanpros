@@ -1,183 +1,163 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Services | Alliance Handyman Pros</title>
-  <link rel="icon" type="image/png" href="/ahp-logo.png" />
-  <meta name="description" content="TV mounting, Samsung Frame installation, above fireplace mounting, cable concealment, furniture assembly, and smart home installs. Call (475) 500-7126." />
-  <link rel="canonical" href="https://www.alliancehandymanpros.com/services/" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handyman Services & TV Mounting | Alliance Handyman Pros</title>
+    <link rel="icon" type="image/png" href="/ahp-logo.png">
+    <meta name="description" content="TV mounting, Samsung Frame installation, smart home setup, furniture assembly, and more across Lower Fairfield County. Call (475) 500-7126.">
+    <link rel="canonical" href="https://www.alliancehandymanpros.com/services/">
+    <meta property="og:site_name" content="Alliance Handyman Pros">
+    <meta property="og:title" content="Handyman Services & TV Mounting | Alliance Handyman Pros">
+    <meta property="og:description" content="TV mounting, Samsung Frame installation, smart home setup, furniture assembly, and more across Lower Fairfield County. Call (475) 500-7126.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.alliancehandymanpros.com/services/">
+    <meta property="og:image" content="https://www.alliancehandymanpros.com/ahp-logo.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Handyman Services & TV Mounting | Alliance Handyman Pros">
+    <meta name="twitter:description" content="TV mounting, Samsung Frame installation, smart home setup, furniture assembly, and more across Lower Fairfield County. Call (475) 500-7126.">
+    <meta name="twitter:image" content="https://www.alliancehandymanpros.com/ahp-logo.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --orange: #f97316;
+            --dark: #1a1a1a;
+            --cream: #fef7f0;
+            --white: #ffffff;
+            --gray: #6b7280;
+            --gray-light: #f3f4f6;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--white);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+        h1, h2, h3 {
+            font-family: 'Oswald', sans-serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            line-height: 1.1;
+        }
+        a { color: inherit; text-decoration: none; }
 
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "@id": "https://www.alliancehandymanpros.com/services/#breadcrumbs",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.alliancehandymanpros.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.alliancehandymanpros.com/services/" }
-      ]
-    }
-  </script>
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 5%;
+            background: var(--dark);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo { display: flex; align-items: center; gap: 0.75rem; color: var(--white); text-decoration: none; }
+        .logo img { height: 40px; width: auto; display: block; }
+        .logo-text { font-family: 'Oswald', sans-serif; font-size: 1.2rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+        .logo-text span { color: var(--orange); }
+        .nav-cta { background: var(--orange); color: var(--white); padding: 0.875rem 1.5rem; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.85rem; text-transform: uppercase; }
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+        .hero {
+            padding: 5rem 5% 3rem;
+            background: var(--gray-light);
+            text-align: center;
+        }
+        .hero h1 { font-size: clamp(2.2rem, 5vw, 3.25rem); margin-bottom: 0.75rem; }
+        .hero p { max-width: 860px; margin: 0 auto; color: var(--gray); font-size: 1.05rem; }
 
-  <style>
-    :root { --orange:#f97316; --dark:#1a1a1a; --cream:#fef7f0; --white:#ffffff; --gray:#6b7280; --gray-light:#f3f4f6; }
-    *{margin:0;padding:0;box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{font-family:'Inter',sans-serif;background:var(--white);color:var(--dark);line-height:1.6;overflow-x:hidden}
-    h1,h2,h3,h4{font-family:'Oswald',sans-serif;font-weight:600;line-height:1.1;text-transform:uppercase;letter-spacing:1px}
-    a{color:inherit}
+        .services {
+            padding: 4rem 5% 5rem;
+        }
+        .services-grid {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 1.5rem;
+        }
+        .service-card {
+            background: var(--white);
+            border: 2px solid var(--gray-light);
+            border-radius: 16px;
+            padding: 1.75rem;
+            transition: all 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 18px 36px rgba(0,0,0,0.08);
+            border-color: var(--dark);
+        }
+        .service-card h3 { font-size: 1.1rem; margin-bottom: 0.6rem; }
+        .service-card p { color: var(--gray); font-size: 0.95rem; }
 
-    nav{position:sticky;top:0;z-index:1000;padding:1rem 5%;display:flex;justify-content:space-between;align-items:center;background:var(--dark);box-shadow:0 2px 20px rgba(0,0,0,.25)}
-    .logo{display:flex;align-items:center;gap:.75rem;color:var(--white);text-decoration:none}
-    .logo img{height:40px;width:auto;display:block}
-    .logo-text{font-family:'Oswald',sans-serif;font-size:1.2rem;font-weight:700;text-transform:uppercase;letter-spacing:2px}
-    .logo-text span{color:var(--orange)}
-    .nav-cta{background:var(--orange);color:var(--white);padding:.875rem 1.5rem;border-radius:50px;text-decoration:none;font-weight:600;font-size:.85rem;letter-spacing:.5px;text-transform:uppercase;white-space:nowrap}
-    .nav-ctas{display:flex;align-items:center;gap:.75rem;flex-wrap:wrap;justify-content:flex-end;}
-    .nav-cta.nav-cta-secondary{background:var(--white);color:var(--orange);border:2px solid rgba(255,255,255,.65)}
-    .nav-cta.nav-cta-secondary:hover{background:rgba(255,255,255,.92);transform:scale(1.02)}
-    .nav-cta:hover{background:#ea580c}
+        .cta {
+            padding: 4.5rem 5%;
+            background: var(--orange);
+            text-align: center;
+            color: var(--white);
+        }
+        .cta h2 { font-size: clamp(1.8rem, 4vw, 2.6rem); margin-bottom: 0.75rem; }
+        .cta p { margin-bottom: 1.5rem; font-size: 1rem; }
+        .cta a { background: var(--white); color: var(--dark); padding: 1rem 2rem; border-radius: 50px; font-weight: 600; display: inline-block; }
 
-    .breadcrumbs{max-width:1100px;margin:1.25rem auto 0;padding:0 5%;color:var(--gray);font-size:.95rem}
-    .breadcrumbs a{color:var(--gray);text-decoration:none}
-    .breadcrumbs a:hover{color:var(--dark);text-decoration:underline}
-
-    .hero{padding:4.5rem 5% 3.5rem;background:var(--gray-light);text-align:center}
-    .hero h1{font-size:clamp(2.2rem,5vw,3.5rem);margin-bottom:.75rem}
-    .hero p{max-width:900px;margin:0 auto;color:var(--gray);font-size:1.05rem}
-    .hero-ctas{margin-top:1.75rem;display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
-    .btn-primary{background:var(--orange);color:var(--white);padding:1.05rem 1.75rem;border-radius:50px;text-decoration:none;font-weight:600;font-size:.9rem;letter-spacing:.5px;text-transform:uppercase}
-    .btn-secondary{background:transparent;color:var(--dark);padding:1.05rem 1.75rem;border-radius:50px;text-decoration:none;font-weight:700;font-size:.9rem;letter-spacing:.5px;text-transform:uppercase;border:2px solid rgba(0,0,0,.2)}
-    .btn-secondary:hover{border-color:rgba(0,0,0,.35)}
-
-    .services{padding:5rem 5% 6rem}
-    .services-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.25rem;max-width:1100px;margin:0 auto}
-    .card{background:var(--white);border:2px solid var(--gray-light);border-radius:16px;padding:1.75rem;box-shadow:0 10px 30px rgba(0,0,0,.04)}
-    .card h3{font-size:1.25rem;margin-bottom:.5rem}
-    .card p{color:var(--gray);font-size:.95rem;line-height:1.7}
-    .card ul{margin-top:.9rem;padding-left:1.1rem;color:var(--gray)}
-    .card li{margin:.35rem 0}
-
-    .cta{padding:5rem 5%;background:var(--orange);text-align:center}
-    .cta h2{color:var(--white);font-size:clamp(2rem,5vw,3rem);margin-bottom:.75rem}
-    .cta p{color:rgba(255,255,255,.95);max-width:900px;margin:0 auto}
-    .cta .hero-ctas{margin-top:1.5rem}
-    .cta .btn-secondary{border-color:rgba(255,255,255,.35);color:var(--white)}
-    .cta .btn-secondary:hover{border-color:rgba(255,255,255,.6)}
-
-    @media (max-width: 900px){
-      .services-grid{grid-template-columns:1fr}
-    }
-  
-    /* Mobile nav tightening */
-    @media (max-width: 768px){
-      .nav-ctas{gap:.5rem}
-      .nav-cta{padding:.65rem 1rem;font-size:.75rem}
-      .nav-cta svg{display:none}
-      .mobile-menu-btn{display:none !important}
-    }
-  </style>
+        @media (max-width: 1024px) {
+            .services-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+        }
+        @media (max-width: 768px) {
+            .services-grid { grid-template-columns: 1fr; }
+        }
+    </style>
 </head>
 <body>
-  <nav>
-    <a href="/" class="logo">
-      <img src="/ahp-logo.png" alt="Alliance Handyman Pros logo">
-      <div class="logo-text">Alliance <span>Handyman Pros</span></div>
-    </a>
-    <div class="nav-ctas">
-        <a href="https://widget.zenbooker.com/book/allaincehandymanpros" class="nav-cta nav-cta-secondary" target="_blank" rel="noopener">Instant Quote</a>
-        <a href="tel:+14755007126" class="nav-cta">Call Now</a>
-    </div>
-  </nav>
+    <nav>
+        <a href="/" class="logo">
+            <img src="/ahp-logo.png" alt="Alliance Handyman Pros logo">
+            <div class="logo-text">Alliance <span>Handyman Pros</span></div>
+        </a>
+        <a class="nav-cta" href="tel:+14755007126">Call Now</a>
+    </nav>
 
-  <div class="breadcrumbs" aria-label="Breadcrumb">
-    <a href="/">Home</a> &gt; <span>Services</span>
-  </div>
+    <section class="hero">
+        <h1>Handyman Services & TV Mounting</h1>
+        <p>We handle TV mounting, Samsung Frame installs, smart home setup, and furniture assembly across Lower Fairfield County. Clear pricing, clean installs, and real people on the phone.</p>
+    </section>
 
-  <header class="hero">
-    <h1>Services</h1>
-    <p>
-      TV mounting is our bread and butter. We also handle furniture assembly and smart home installs for homeowners who want it done right the first time.
-    </p>
-    <div class="hero-ctas">
-      <a href="tel:+14755007126" class="btn-primary">Call Now: (475) 500-7126</a>
-      <a href="https://widget.zenbooker.com/book/allaincehandymanpros" class="btn-secondary" target="_blank" rel="noopener">Book Online</a>
-    </div>
-  </header>
+    <section class="services">
+        <div class="services-grid">
+            <div class="service-card">
+                <h3>TV Mounting</h3>
+                <p>Drywall, brick, stone, and above-fireplace mounts with secure anchoring and clean alignment.</p>
+            </div>
+            <div class="service-card">
+                <h3>Samsung Frame Installation</h3>
+                <p>No-gap mounting, wire management, and clean placement of the One Connect box.</p>
+            </div>
+            <div class="service-card">
+                <h3>OLED & Large TVs</h3>
+                <p>Safe installs for premium displays with stud-finding and heavy-duty mounting hardware.</p>
+            </div>
+            <div class="service-card">
+                <h3>Cable Concealment</h3>
+                <p>In-wall routing or paintable covers so your setup looks finished.</p>
+            </div>
+            <div class="service-card">
+                <h3>Smart Home Installation</h3>
+                <p>Nest, Ring, smart locks, and cameras installed and connected to your WiFi.</p>
+            </div>
+            <div class="service-card">
+                <h3>Furniture Assembly</h3>
+                <p>IKEA, Wayfair, and more assembled quickly and placed exactly where you want it.</p>
+            </div>
+        </div>
+    </section>
 
-  <main class="services">
-    <div class="services-grid">
-      <div class="card">
-        <h3>TV Mounting</h3>
-        <p>Clean, secure installs on drywall, plaster, brick, and stone.</p>
-        <ul>
-          <li>Centered placement and clean sight lines</li>
-          <li>Soundbar mounting (optional)</li>
-          <li>Device and input check before we leave</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Samsung Frame Installation</h3>
-        <p>Flush, level, and planned so the wall stays clean.</p>
-        <ul>
-          <li>Frame flush mount and leveling</li>
-          <li>One Connect box planning</li>
-          <li>Cable concealment options</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Above Fireplace TV Mounting</h3>
-        <p>We evaluate the surface and layout first so it looks intentional and feels secure.</p>
-        <ul>
-          <li>Surface check before drilling</li>
-          <li>Centered layout and cable plan</li>
-          <li>Heat/clearance discussion up front</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Cable Concealment</h3>
-        <p>We keep wires tidy and recommend the cleanest option for your wall type.</p>
-        <ul>
-          <li>In-wall routing when possible</li>
-          <li>Paintable cord covers when it is not</li>
-          <li>Neat device placement so it stays clean</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Furniture Assembly</h3>
-        <p>From one piece to a whole room, we assemble it cleanly and correctly.</p>
-        <ul>
-          <li>Dressers, beds, desks, shelving</li>
-          <li>Hardware tightened and checked</li>
-          <li>Packaging cleanup</li>
-        </ul>
-      </div>
-      <div class="card">
-        <h3>Smart Home Installations</h3>
-        <p>Simple installs that work the way they should.</p>
-        <ul>
-          <li>Video doorbells and cameras</li>
-          <li>Smart thermostats and sensors</li>
-          <li>Basic setup and testing</li>
-        </ul>
-      </div>
-    </div>
-  </main>
-
-  <section class="cta">
-    <h2>Ready to get it done?</h2>
-    <p>Call now or book online. Same-day and next-day appointments are available most days.</p>
-    <div class="hero-ctas">
-      <a href="tel:+14755007126" class="btn-primary">Call Now: (475) 500-7126</a>
-      <a href="https://widget.zenbooker.com/book/allaincehandymanpros" class="btn-secondary" target="_blank" rel="noopener">Book Online</a>
-    </div>
-  </section>
+    <section class="cta">
+        <h2>Need Help This Week?</h2>
+        <p>Call or text and we will get you booked fast.</p>
+        <a href="tel:+14755007126">Call (475) 500-7126</a>
+    </section>
 </body>
 </html>
-
-
