@@ -65,8 +65,8 @@
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Samsung Frame Installation", "description": "No-gap Samsung Frame TV mounting with One Connect box placement and wire management." } },
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "OLED TV Mounting", "description": "Safe installation for premium OLED displays with heavy-duty hardware." } },
             { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Cable Concealment", "description": "In-wall wire routing or paintable raceways for a clean finished look." } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Smart Home Installation", "description": "Ring, Nest, smart locks, and security cameras installed and configured." } },
-            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Furniture Assembly", "description": "IKEA, Wayfair, and more assembled quickly and placed exactly where you want it." } }
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Furniture Assembly", "description": "IKEA, Wayfair, and more assembled quickly and placed exactly where you want it." } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bulb & Battery Service", "description": "High-ceiling light bulb replacement and smoke detector battery and unit replacement, residential and commercial." } }
           ],
           "sameAs": [
             "https://www.alliancehandymanpros.com/"
@@ -88,39 +88,39 @@
             --gray-light: #f3f4f6;
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { font-family: 'Inter', sans-serif; background: var(--white); color: var(--dark); line-height: 1.6; overflow-x: hidden; }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        h1, h2, h3, h4 { font-family: 'Oswald', sans-serif; font-weight: 600; line-height: 1.1; text-transform: uppercase; letter-spacing: 1px; }
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: var(--white);
-            color: var(--dark);
-            line-height: 1.6;
-            overflow-x: hidden;
+        /* Utility Bar */
+        .utility-bar {
+            background: #1a1a1a;
+            padding: 0.5rem 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.8rem;
+            color: rgba(255,255,255,0.7);
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1001;
         }
-
-        /* Typography */
-        h1, h2, h3, h4 {
-            font-family: 'Oswald', sans-serif;
-            font-weight: 600;
-            line-height: 1.1;
-            text-transform: uppercase;
-            letter-spacing: 1px;
+        .utility-bar a { color: #f97316; text-decoration: none; font-weight: 600; }
+        .utility-bar .hours::before {
+            content: '';
+            width: 7px; height: 7px;
+            background: #22c55e;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 6px;
         }
 
         /* Navigation */
         nav {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 36px; left: 0; right: 0;
             z-index: 1000;
             padding: 1rem 5%;
             display: flex;
@@ -129,57 +129,33 @@
             background: transparent;
             transition: all 0.3s ease;
         }
+        nav.scrolled { background: var(--dark); box-shadow: 0 2px 20px rgba(0,0,0,0.3); }
 
-        nav.scrolled {
-            background: var(--dark);
-            box-shadow: 0 2px 20px rgba(0,0,0,0.3);
-        }
+        .logo { display: flex; align-items: center; gap: 0.75rem; color: var(--white); text-decoration: none; }
+        .logo img { height: 40px; width: auto; display: block; }
+        .logo-text { font-family: 'Oswald', sans-serif; font-size: 1.2rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
+        .logo-text span { color: var(--orange); }
 
-        .logo {
+        .nav-links { display: flex; gap: 2.5rem; list-style: none; }
+        .nav-links a { color: var(--white); text-decoration: none; font-size: 0.85rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s ease; }
+        .nav-links a:hover { color: var(--orange); }
+
+        .nav-book-btn {
+            background: transparent;
+            color: var(--white);
+            padding: 0.875rem 1.5rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            border: 2px solid rgba(255,255,255,0.4);
+            transition: all 0.3s ease;
             display: flex;
             align-items: center;
-            gap: 0.75rem;
-            color: var(--white);
-            text-decoration: none;
         }
-
-        .logo img {
-            height: 40px;
-            width: auto;
-            display: block;
-        }
-
-        .logo-text {
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        .logo-text span {
-            color: var(--orange);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2.5rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--white);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            transition: color 0.3s ease;
-        }
-
-        .nav-links a:hover {
-            color: var(--orange);
-        }
+        .nav-book-btn:hover { border-color: var(--white); background: rgba(255,255,255,0.1); }
 
         .nav-cta {
             background: var(--orange);
@@ -196,725 +172,200 @@
             align-items: center;
             gap: 0.5rem;
         }
-
-        .nav-cta:hover {
-            background: #ea580c;
-            transform: scale(1.02);
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920') center/cover;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            position: relative;
-        }
-
-        .hero-content {
-            max-width: 900px;
-            padding: 2rem;
-        }
-
-        .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-            background: var(--orange);
-            padding: 0.6rem 1.25rem;
-            border-radius: 50px;
-            margin-bottom: 2rem;
-            animation: fadeInDown 0.6s ease;
-        }
-
-        .hero-badge::before {
-            content: '';
-            width: 8px;
-            height: 8px;
-            background: var(--white);
-            border-radius: 50%;
-            animation: pulse 2s infinite;
-        }
-
-        .hero-badge span {
-            color: var(--white);
-            font-size: 0.8rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .hero h1 {
-            font-size: clamp(3rem, 8vw, 5.5rem);
-            color: var(--white);
-            margin-bottom: 0.5rem;
-            animation: fadeInUp 0.6s ease 0.1s both;
-        }
-
-        .hero h1 .highlight {
-            color: var(--orange);
-        }
-
-        .hero-tagline {
-            font-family: 'Oswald', sans-serif;
-            font-size: clamp(1.25rem, 3vw, 1.75rem);
-            color: var(--white);
-            margin-bottom: 1.5rem;
-            font-weight: 400;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            animation: fadeInUp 0.6s ease 0.2s both;
-        }
-
-        .hero-subtitle {
-            font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.9);
-            margin-bottom: 2rem;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-            font-weight: 400;
-            line-height: 1.7;
-            animation: fadeInUp 0.6s ease 0.3s both;
-        }
-
-        .hero-features {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-bottom: 2.5rem;
-            flex-wrap: wrap;
-            animation: fadeInUp 0.6s ease 0.4s both;
-        }
-
-        .hero-feature {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            color: var(--white);
-            font-size: 0.9rem;
-        }
-
-        .hero-feature svg {
-            color: #22c55e;
-        }
-
-        .hero-ctas {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            flex-wrap: wrap;
-            animation: fadeInUp 0.6s ease 0.5s both;
-        }
-
-        .hero-phone {
-            margin-top: 1.5rem;
-            color: rgba(255,255,255,0.85);
-            font-size: 0.95rem;
-        }
-
-        .btn-primary {
-            background: var(--orange);
-            color: var(--white);
-            padding: 1.125rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 0.5rem;
-        }
-
-        .btn-primary:hover {
-            background: #ea580c;
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(249, 115, 22, 0.4);
-        }
-
-        .btn-secondary {
-            background: rgba(255,255,255,0.1);
-            color: var(--white);
-            padding: 1.125rem 2rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
-            border: 2px solid rgba(255,255,255,0.3);
-            transition: all 0.3s ease;
-        }
-
-        .btn-secondary:hover {
-            border-color: var(--white);
-            background: rgba(255,255,255,0.15);
-        }
-
-        /* Social Proof Bar */
-        .social-proof {
-            background: var(--dark);
-            padding: 1.5rem 5%;
-            text-align: center;
-        }
-
-        .social-proof-content {
-            color: var(--white);
-            font-family: 'Oswald', sans-serif;
-            font-size: 1rem;
-            font-weight: 500;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-        }
-
-        .social-proof-content span {
-            color: var(--orange);
-        }
-
-        /* Section Styles */
-        .section-tag {
-            display: inline-block;
-            background: var(--cream);
-            color: var(--orange);
-            font-size: 0.75rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            margin-bottom: 1.5rem;
-        }
-
-        .section-header {
-            text-align: center;
-            max-width: 700px;
-            margin: 0 auto 4rem;
-        }
-
-        .section-header h2 {
-            font-size: clamp(2rem, 5vw, 3rem);
-            color: var(--dark);
-            margin-bottom: 1rem;
-        }
-
-        .section-header p {
-            color: var(--gray);
-            font-size: 1.05rem;
-        }
-
-        /* Where We Work */
-        .where-we-work {
-            padding: 6rem 5%;
-            background: var(--gray-light);
-        }
-
-        .stories-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .story-card {
-            background: var(--white);
-            border-radius: 16px;
-            padding: 2rem;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
-        }
-
-        .story-card h3 {
-            font-size: 1.3rem;
-            color: var(--dark);
-            margin-bottom: 1rem;
-        }
-
-        .story-card p {
-            color: var(--gray);
-            font-size: 0.95rem;
-            line-height: 1.7;
-        }
-
-        /* Services Section */
-        .services {
-            padding: 6rem 5%;
-            background: var(--white);
-        }
-
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .service-card {
-            background: var(--white);
-            border: 2px solid var(--gray-light);
-            border-radius: 16px;
-            padding: 2rem;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        .service-card::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            height: 4px;
-            background: var(--dark);
-            border-radius: 0 0 16px 16px;
-            transform: scaleY(0);
-            transform-origin: bottom;
-            transition: transform 0.3s ease;
-        }
-
-        .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
-            border-color: var(--dark);
-        }
-
-        .service-card:hover::after {
-            transform: scaleY(1);
-        }
-
-        .service-icon {
-            width: 70px;
-            height: 70px;
-            background: var(--cream);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            font-size: 2rem;
-        }
-
-        .service-card h3 {
-            font-size: 1.2rem;
-            color: var(--dark);
-            margin-bottom: 0.75rem;
-        }
-
-        .service-card p {
-            color: var(--gray);
-            font-size: 0.9rem;
-            line-height: 1.7;
-        }
-
-        /* Other Services */
-        .other-services {
-            padding: 6rem 5%;
-            background: var(--gray-light);
-        }
-
-        .other-services-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem;
-            max-width: 1000px;
-            margin: 0 auto;
-        }
-
-        .other-service-card {
-            text-align: center;
-        }
-
-        .other-service-card h4 {
-            font-size: 1.1rem;
-            color: var(--dark);
-            margin-bottom: 0.75rem;
-        }
-
-        .other-service-card p {
-            color: var(--gray);
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        /* How It Works */
-        .how-it-works {
-            padding: 6rem 5%;
-            background: var(--white);
-        }
-
-        .steps-container {
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-            gap: 0;
-            max-width: 1100px;
-            margin: 0 auto;
-            position: relative;
-        }
-
-        .step {
-            flex: 1;
-            text-align: center;
-            padding: 0 2rem;
-            position: relative;
-        }
-
-        .step-number {
-            width: 70px;
-            height: 70px;
-            background: var(--orange);
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 0 auto 1.5rem;
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.75rem;
-            font-weight: 700;
-            color: var(--white);
-            position: relative;
-            z-index: 2;
-        }
-
-        .step:not(:last-child)::after {
-            content: '';
-            position: absolute;
-            top: 35px;
-            left: calc(50% + 35px);
-            width: calc(100% - 70px);
-            height: 3px;
-            background: var(--orange);
-            z-index: 1;
-        }
-
-        .step h4 {
-            font-size: 1.25rem;
-            color: var(--dark);
-            margin-bottom: 0.75rem;
-        }
-
-        .step p {
-            color: var(--gray);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* Why Us */
-        .why-us {
-            padding: 6rem 5%;
-            background: var(--gray-light);
-        }
-
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .feature-item {
-            text-align: center;
-            padding: 1.5rem;
-        }
-
-        .feature-item h4 {
-            font-size: 1.1rem;
-            color: var(--dark);
-            margin-bottom: 0.75rem;
-        }
-
-        .feature-item p {
-            color: var(--gray);
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-
-        /* Service Areas */
-        .areas {
-            padding: 6rem 5%;
-            background: var(--white);
-        }
-
-        .areas-grid {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 1rem;
-            max-width: 900px;
-            margin: 0 auto 1.5rem;
-        }
-
-        .area-tag {
-            background: var(--gray-light);
-            padding: 0.875rem 1.5rem;
-            border-radius: 50px;
-            font-weight: 500;
-            color: var(--dark);
-            font-size: 0.95rem;
-            transition: all 0.3s ease;
-            border: 2px solid transparent;
-        }
-
-        .area-tag:hover {
-            background: var(--orange);
-            color: var(--white);
-            transform: translateY(-2px);
-        }
-
-        .areas-subtext {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
-            color: var(--gray);
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-
-        /* CTA Banner */
-        .cta-banner {
-            padding: 5rem 5%;
-            background: var(--orange);
-            text-align: center;
-            position: relative;
-            overflow: hidden;
-        }
-
-        .cta-banner::before,
-        .cta-banner::after {
-            content: '';
-            position: absolute;
-            width: 20px;
-            height: 20px;
-            background: var(--dark);
-            border-radius: 50%;
-        }
-
-        .cta-banner::before {
-            top: 20px;
-            left: 20px;
-        }
-
-        .cta-banner::after {
-            bottom: 20px;
-            right: 20px;
-        }
-
-        .cta-banner h2 {
-            font-size: clamp(2rem, 5vw, 3rem);
-            color: var(--white);
-            margin-bottom: 1rem;
-        }
-
-        .cta-banner p {
-            color: rgba(255,255,255,0.9);
-            font-size: 1.1rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .cta-banner .subtext {
-            font-size: 0.95rem;
-            color: rgba(255,255,255,0.8);
-            margin-bottom: 2rem;
-        }
-
-        .phone-btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 0.75rem;
-            background: var(--white);
-            color: var(--dark);
-            padding: 1.25rem 2.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-family: 'Oswald', sans-serif;
-            font-size: 1.5rem;
-            font-weight: 600;
-            letter-spacing: 1px;
-            transition: all 0.3s ease;
-            margin-bottom: 1rem;
-        }
-
-        .phone-btn:hover {
-            transform: scale(1.05);
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-        }
-
-        .cta-note {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 0.5rem;
-            color: var(--white);
-            font-size: 0.9rem;
-        }
-
-        .cta-note::before {
-            content: '';
-            width: 8px;
-            height: 8px;
-            background: #22c55e;
-            border-radius: 50%;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-            justify-content: center;
-            margin-bottom: 1rem;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--dark);
-            padding: 4rem 5% 2rem;
-        }
-
-        .footer-brand {
-            text-align: center;
-            margin-bottom: 2rem;
-        }
-
-        .footer-brand .logo {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-tagline {
-            font-family: 'Oswald', sans-serif;
-            color: rgba(255,255,255,0.6);
-            font-size: 1rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            margin-bottom: 0.5rem;
-        }
-
-        .footer-phone {
-            color: var(--orange);
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-
-        .footer-areas {
-            color: rgba(255,255,255,0.5);
-            font-size: 0.9rem;
-            margin-bottom: 2rem;
-        }
-
-        .footer-bottom {
-            text-align: center;
-            padding-top: 2rem;
-            border-top: 1px solid rgba(255,255,255,0.1);
-        }
-
-        .footer-bottom p {
-            color: rgba(255,255,255,0.4);
-            font-size: 0.85rem;
-        }
-
-        /* Animations */
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(30px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @keyframes pulse {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.5; }
-        }
+        .nav-cta:hover { background: #ea580c; transform: scale(1.02); }
 
         /* Mobile Menu */
-        .mobile-menu-btn {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            padding: 10px;
-        }
+        .mobile-menu-btn { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 10px; }
+        .mobile-menu-btn span { width: 25px; height: 2px; background: var(--white); }
 
-        .mobile-menu-btn span {
-            width: 25px;
-            height: 2px;
-            background: var(--white);
+        /* Hero */
+        .hero {
+            min-height: 100vh;
+            background: #fef7f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            padding-top: 72px;
         }
+        .hero-content { max-width: 900px; padding: 2rem; }
+
+        .hero-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: var(--orange); padding: 0.6rem 1.25rem; border-radius: 50px; margin-bottom: 2rem; animation: fadeInDown 0.6s ease; }
+        .hero-badge::before { content: ''; width: 8px; height: 8px; background: var(--white); border-radius: 50%; animation: pulse 2s infinite; }
+        .hero-badge span { color: var(--white); font-size: 0.8rem; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+
+        .hero h1 { font-size: clamp(3rem, 8vw, 5.5rem); color: #1a1a1a; margin-bottom: 0.5rem; animation: fadeInUp 0.6s ease 0.1s both; }
+        .hero h1 .highlight { color: var(--orange); }
+
+        .hero-tagline { font-family: 'Oswald', sans-serif; font-size: clamp(1.25rem, 3vw, 1.75rem); color: #6b7280; margin-bottom: 1.5rem; font-weight: 400; letter-spacing: 2px; text-transform: uppercase; animation: fadeInUp 0.6s ease 0.2s both; }
+
+        .hero-subtitle { font-size: 1.1rem; color: #6b7280; margin-bottom: 2rem; max-width: 700px; margin-left: auto; margin-right: auto; font-weight: 400; line-height: 1.7; animation: fadeInUp 0.6s ease 0.3s both; }
+
+        /* Trust Counter */
+        .trust-counter { display: inline-flex; align-items: center; gap: 1.5rem; background: #ffffff; border: 1.5px solid #f3f4f6; border-radius: 50px; padding: 0.75rem 2rem; margin-bottom: 2rem; flex-wrap: wrap; justify-content: center; }
+        .trust-stat { display: flex; flex-direction: column; align-items: center; }
+        .trust-stat .num { font-family: 'Oswald', sans-serif; font-size: 1.4rem; font-weight: 700; color: #f97316; line-height: 1; }
+        .trust-stat .label { font-size: 0.7rem; color: #6b7280; text-transform: uppercase; letter-spacing: 0.5px; }
+        .trust-divider { width: 1px; height: 32px; background: #f3f4f6; }
+
+        .hero-features { display: flex; justify-content: center; gap: 2rem; margin-bottom: 2.5rem; flex-wrap: wrap; animation: fadeInUp 0.6s ease 0.4s both; }
+        .hero-feature { display: flex; align-items: center; gap: 0.5rem; color: #1a1a1a; font-size: 0.9rem; }
+        .hero-feature svg { color: #22c55e; }
+
+        .hero-ctas { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; animation: fadeInUp 0.6s ease 0.5s both; }
+
+        .btn-primary { background: var(--orange); color: var(--white); padding: 1.125rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase; transition: all 0.3s ease; display: inline-flex; align-items: center; gap: 0.5rem; }
+        .btn-primary:hover { background: #ea580c; transform: translateY(-2px); box-shadow: 0 10px 30px rgba(249,115,22,0.4); }
+
+        .btn-secondary { background: #ffffff; color: #1a1a1a; padding: 1.125rem 2rem; border-radius: 50px; text-decoration: none; font-weight: 600; font-size: 0.9rem; letter-spacing: 0.5px; text-transform: uppercase; border: 2px solid #f3f4f6; transition: all 0.3s ease; }
+        .btn-secondary:hover { border-color: var(--dark); background: var(--gray-light); }
+
+        /* Social Proof Bar */
+        .social-proof { background: var(--dark); padding: 1.5rem 5%; text-align: center; }
+        .social-proof-content { color: var(--white); font-family: 'Oswald', sans-serif; font-size: 1rem; font-weight: 500; letter-spacing: 1px; text-transform: uppercase; }
+        .social-proof-content span { color: var(--orange); }
+
+        /* Section Styles */
+        .section-tag { display: inline-block; background: var(--cream); color: var(--orange); font-size: 0.75rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; padding: 0.5rem 1rem; border-radius: 50px; margin-bottom: 1.5rem; }
+        .section-header { text-align: center; max-width: 700px; margin: 0 auto 4rem; }
+        .section-header h2 { font-size: clamp(2rem, 5vw, 3rem); color: var(--dark); margin-bottom: 1rem; }
+        .section-header p { color: var(--gray); font-size: 1.05rem; }
+
+        /* Where We Work */
+        .where-we-work { padding: 6rem 5%; background: var(--gray-light); }
+        .stories-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto; }
+        .story-card { background: var(--white); border-radius: 16px; padding: 2rem; box-shadow: 0 10px 30px rgba(0,0,0,0.06); }
+        .story-card h3 { font-size: 1.3rem; color: var(--dark); margin-bottom: 1rem; }
+        .story-card p { color: var(--gray); font-size: 0.95rem; line-height: 1.7; }
+
+        /* Service Lines */
+        .service-lines { padding: 6rem 5%; background: var(--white); }
+        .service-lines-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1100px; margin: 0 auto; }
+
+        .service-line-card { border: 2px solid var(--gray-light); border-radius: 20px; overflow: hidden; transition: all 0.3s ease; position: relative; }
+        .service-line-card:hover { transform: translateY(-6px); box-shadow: 0 24px 48px rgba(0,0,0,0.1); border-color: var(--orange); }
+
+        .service-line-link { display: flex; flex-direction: column; padding: 2.5rem; text-decoration: none; color: inherit; height: 100%; }
+
+        .service-line-icon { width: 72px; height: 72px; background: var(--cream); border-radius: 18px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; transition: background 0.3s ease; }
+        .service-line-card:hover .service-line-icon { background: var(--orange); }
+        .service-line-icon svg { color: var(--orange); transition: color 0.3s ease; }
+        .service-line-card:hover .service-line-icon svg { color: var(--white); }
+
+        .service-line-card h3 { font-size: 1.4rem; color: var(--dark); margin-bottom: 0.75rem; }
+        .service-line-card p { color: var(--gray); font-size: 0.95rem; line-height: 1.7; flex-grow: 1; margin-bottom: 1.5rem; }
+        .service-line-cta { display: inline-flex; align-items: center; gap: 0.5rem; color: var(--orange); font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+
+        /* TV Detail Section */
+        .services { padding: 6rem 5%; background: var(--gray-light); }
+        .services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; max-width: 1100px; margin: 0 auto; }
+
+        .service-card { background: var(--white); border: 2px solid var(--gray-light); border-radius: 16px; padding: 2rem; transition: all 0.3s ease; position: relative; }
+        .service-card::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 4px; background: var(--dark); border-radius: 0 0 16px 16px; transform: scaleY(0); transform-origin: bottom; transition: transform 0.3s ease; }
+        .service-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px rgba(0,0,0,0.08); border-color: var(--dark); }
+        .service-card:hover::after { transform: scaleY(1); }
+
+        .service-icon { width: 70px; height: 70px; background: var(--cream); border-radius: 16px; display: flex; align-items: center; justify-content: center; margin-bottom: 1.5rem; }
+        .service-icon svg { width: 32px; height: 32px; color: #f97316; }
+        .service-card h3 { font-size: 1.2rem; color: var(--dark); margin-bottom: 0.75rem; }
+        .service-card p { color: var(--gray); font-size: 0.9rem; line-height: 1.7; }
+
+        /* How It Works */
+        .how-it-works { padding: 6rem 5%; background: var(--white); }
+        .steps-container { display: flex; align-items: flex-start; justify-content: center; gap: 0; max-width: 1100px; margin: 0 auto; position: relative; }
+        .step { flex: 1; text-align: center; padding: 0 2rem; position: relative; }
+        .step-number { width: 70px; height: 70px; background: var(--orange); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 1.5rem; font-family: 'Oswald', sans-serif; font-size: 1.75rem; font-weight: 700; color: var(--white); position: relative; z-index: 2; }
+        .step:not(:last-child)::after { content: ''; position: absolute; top: 35px; left: calc(50% + 35px); width: calc(100% - 70px); height: 3px; background: var(--orange); z-index: 1; }
+        .step h4 { font-size: 1.25rem; color: var(--dark); margin-bottom: 0.75rem; }
+        .step p { color: var(--gray); font-size: 0.95rem; line-height: 1.6; }
+
+        /* Why Us */
+        .why-us { padding: 6rem 5%; background: var(--gray-light); }
+        .features-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; max-width: 1200px; margin: 0 auto; }
+        .feature-item { text-align: center; padding: 1.5rem; }
+        .feature-item h4 { font-size: 1.1rem; color: var(--dark); margin-bottom: 0.75rem; }
+        .feature-item p { color: var(--gray); font-size: 0.9rem; line-height: 1.6; }
+
+        /* Reviews */
+        .reviews { padding: 6rem 5%; background: #ffffff; }
+        .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; max-width: 1100px; margin: 0 auto; }
+        .review-card { background: #f3f4f6; border-radius: 16px; padding: 2rem; }
+        .review-stars { color: #f97316; font-size: 1rem; letter-spacing: 2px; margin-bottom: 1rem; }
+        .review-text { color: #1a1a1a; font-size: 0.95rem; line-height: 1.7; margin-bottom: 1.5rem; font-style: italic; }
+        .review-author { display: flex; align-items: center; gap: 0.75rem; }
+        .review-avatar { width: 42px; height: 42px; border-radius: 50%; background: #f97316; display: flex; align-items: center; justify-content: center; font-family: 'Oswald', sans-serif; font-weight: 700; color: #ffffff; font-size: 0.9rem; flex-shrink: 0; }
+        .review-name { font-weight: 600; font-size: 0.9rem; color: #1a1a1a; }
+        .review-location { font-size: 0.8rem; color: #6b7280; }
+
+        /* Service Areas */
+        .areas { padding: 6rem 5%; background: var(--white); }
+        .areas-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; max-width: 900px; margin: 0 auto 1.5rem; }
+        .area-tag { background: var(--gray-light); padding: 0.875rem 1.5rem; border-radius: 50px; font-weight: 500; color: var(--dark); font-size: 0.95rem; transition: all 0.3s ease; border: 2px solid transparent; text-decoration: none; display: inline-block; }
+        .area-tag:hover { background: var(--orange); color: var(--white); transform: translateY(-2px); }
+        .areas-subtext { max-width: 900px; margin: 0 auto; text-align: center; color: var(--gray); font-size: 0.95rem; line-height: 1.6; }
+
+        /* CTA Banner */
+        .cta-banner { padding: 5rem 5%; background: var(--orange); text-align: center; position: relative; overflow: hidden; }
+        .cta-banner::before, .cta-banner::after { content: ''; position: absolute; width: 20px; height: 20px; background: var(--dark); border-radius: 50%; }
+        .cta-banner::before { top: 20px; left: 20px; }
+        .cta-banner::after { bottom: 20px; right: 20px; }
+        .cta-banner h2 { font-size: clamp(2rem, 5vw, 3rem); color: var(--white); margin-bottom: 1rem; }
+        .cta-banner p { color: rgba(255,255,255,0.9); font-size: 1.1rem; margin-bottom: 0.5rem; }
+        .cta-banner .subtext { font-size: 0.95rem; color: rgba(255,255,255,0.8); margin-bottom: 2rem; }
+        .phone-btn { display: inline-flex; align-items: center; gap: 0.75rem; background: var(--white); color: var(--dark); padding: 1.25rem 2.5rem; border-radius: 50px; text-decoration: none; font-family: 'Oswald', sans-serif; font-size: 1.5rem; font-weight: 600; letter-spacing: 1px; transition: all 0.3s ease; margin-bottom: 1rem; }
+        .phone-btn:hover { transform: scale(1.05); box-shadow: 0 15px 40px rgba(0,0,0,0.2); }
+        .cta-buttons { display: flex; gap: 1rem; justify-content: center; margin-bottom: 1rem; }
+
+        /* Footer */
+        footer { background: var(--dark); padding: 4rem 5% 2rem; }
+        .footer-top { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 3rem; margin-bottom: 3rem; }
+        .footer-brand { text-align: left; }
+        .footer-brand .logo { font-size: 2rem; margin-bottom: 0.5rem; }
+        .footer-tagline { font-family: 'Oswald', sans-serif; color: rgba(255,255,255,0.6); font-size: 1rem; letter-spacing: 2px; text-transform: uppercase; margin-top: 0.5rem; margin-bottom: 0.5rem; }
+        .footer-col-title { font-family: 'Oswald', sans-serif; font-size: 0.8rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.4); margin-bottom: 1rem; }
+        .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; }
+        .footer-links a { color: rgba(255,255,255,0.6); text-decoration: none; font-size: 0.9rem; transition: color 0.2s ease; }
+        .footer-links a:hover { color: #f97316; }
+        .footer-phone { color: #f97316; font-family: 'Oswald', sans-serif; font-size: 1.3rem; font-weight: 600; text-decoration: none; display: block; margin-bottom: 0.5rem; }
+        .footer-hours { color: rgba(255,255,255,0.5); font-size: 0.85rem; line-height: 1.8; }
+        .footer-bottom { text-align: center; padding-top: 2rem; border-top: 1px solid rgba(255,255,255,0.1); }
+        .footer-bottom p { color: rgba(255,255,255,0.4); font-size: 0.85rem; }
+
+        /* Animations */
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(30px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes fadeInDown { from { opacity: 0; transform: translateY(-20px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
 
         /* Responsive */
         @media (max-width: 1024px) {
-            .services-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .stories-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .features-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-
-            .other-services-grid {
-                grid-template-columns: 1fr;
-            }
+            .services-grid { grid-template-columns: repeat(2, 1fr); }
+            .stories-grid { grid-template-columns: 1fr; }
+            .features-grid { grid-template-columns: repeat(2, 1fr); }
+            .service-lines-grid { grid-template-columns: repeat(2, 1fr); }
         }
-
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .mobile-menu-btn {
-                display: flex;
-            }
-
-            .services-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .features-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .steps-container {
-                flex-direction: column;
-                gap: 3rem;
-            }
-
-            .step:not(:last-child)::after {
-                display: none;
-            }
-
-            .hero-features {
-                flex-direction: column;
-                gap: 1rem;
-            }
+            .nav-links { display: none; }
+            .nav-book-btn { display: none; }
+            .mobile-menu-btn { display: flex; }
+            .services-grid { grid-template-columns: 1fr; }
+            .service-lines-grid { grid-template-columns: 1fr; }
+            .features-grid { grid-template-columns: 1fr; }
+            .steps-container { flex-direction: column; gap: 3rem; }
+            .step:not(:last-child)::after { display: none; }
+            .hero-features { flex-direction: column; gap: 1rem; }
+            .reviews-grid { grid-template-columns: 1fr; }
+            .footer-top { grid-template-columns: 1fr; gap: 2rem; }
         }
     </style>
 </head>
 <body>
+    <!-- Utility Bar -->
+    <div class="utility-bar">
+        <span class="hours">Mon&ndash;Sat 8am&ndash;6pm &middot; Sun by Request</span>
+        <span>Same-day slots available &middot; <a href="tel:+14755007126">(475) 500-7126</a></span>
+    </div>
+
     <!-- Navigation -->
     <nav id="navbar">
         <a href="#top" class="logo">
@@ -927,14 +378,13 @@
             <li><a href="#about">About</a></li>
             <li><a href="#areas">Service Areas</a></li>
         </ul>
+        <a href="https://widget.zenbooker.com/book/allaincehandymanpros" class="nav-book-btn" target="_blank" rel="noopener">Book Now</a>
         <a href="tel:+14755007126" class="nav-cta">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
-            Call Now for Service
+            Call Now
         </a>
         <div class="mobile-menu-btn">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </div>
     </nav>
 
@@ -942,15 +392,24 @@
     <section class="hero">
         <div class="hero-content">
             <div class="hero-badge">
-                <span>TV Mounting Specialists • Lower Fairfield County</span>
+                <span>TV Mounting &bull; Furniture Assembly &bull; Bulb &amp; Battery</span>
             </div>
-            <h1>The TV Mounting Pros for <span class="highlight">Fairfield County</span></h1>
-            <p class="hero-tagline">Greenwich • Darien • Westport • New Canaan • Stamford • Norwalk</p>
-            <p class="hero-subtitle">Hi! We're Alliance Handyman Pros. What started as weekend side jobs quickly grew into what it is today. We handle Samsung Frame installs and OLED panels on everything from drywall to stone and brick. We've been in Harbor Point high-rises, Greenwich waterfront condos, and Darien family rooms.<br><br>Same-day appointments available. 7 days a week. When you call, we answer fast and help you book the right time.</p>
+            <h1>The Home Service Pros for <span class="highlight">Fairfield County</span></h1>
+            <p class="hero-tagline">Greenwich &bull; Darien &bull; Westport &bull; New Canaan &bull; Stamford &bull; Norwalk</p>
+            <p class="hero-subtitle">Hi! We're Alliance Handyman Pros. What started as weekend side jobs quickly grew into what it is today. We handle Samsung Frame installs, OLED panels, furniture assembly, and bulb &amp; battery service across Fairfield County &mdash; on everything from Harbor Point high-rises to Greenwich waterfront condos to Darien family rooms.<br><br>Same-day appointments available. 7 days a week. When you call, we answer fast.</p>
+            <div class="trust-counter">
+                <div class="trust-stat"><span class="num">550+</span><span class="label">TVs Mounted</span></div>
+                <div class="trust-divider"></div>
+                <div class="trust-stat"><span class="num">7</span><span class="label">Days a Week</span></div>
+                <div class="trust-divider"></div>
+                <div class="trust-stat"><span class="num">12</span><span class="label">Towns Served</span></div>
+                <div class="trust-divider"></div>
+                <div class="trust-stat"><span class="num">5&#9733;</span><span class="label">Rated</span></div>
+            </div>
             <div class="hero-features">
                 <div class="hero-feature">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
-                    Fully Insured (Never Had to Use It, Knock on Wood)
+                    Fully Insured
                 </div>
                 <div class="hero-feature">
                     <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>
@@ -974,7 +433,7 @@
     <!-- Social Proof Bar -->
     <section class="social-proof">
         <div class="social-proof-content">
-            TV Mounting Specialists | <span>7 Days a Week</span>
+            TV Mounting &bull; Furniture Assembly &bull; Bulb &amp; Battery | <span>7 Days a Week</span>
         </div>
     </section>
 
@@ -982,8 +441,8 @@
     <section class="where-we-work">
         <div class="section-header">
             <span class="section-tag">Where We Work</span>
-            <h2>We've Mounted TVs All Over Fairfield County</h2>
-            <p>Across Fairfield County, from shoreline condos to historic colonials and new builds, we've worked in just about every type of home and building you can think of.</p>
+            <h2>We've Worked All Over Fairfield County</h2>
+            <p>From shoreline condos to historic colonials and new builds, we've been in just about every type of home and building in the area.</p>
         </div>
         <div class="stories-grid">
             <div class="story-card">
@@ -1005,51 +464,75 @@
         </div>
     </section>
 
-    <!-- TV Mounting Services -->
-    <section class="services" id="services">
+    <!-- Service Lines -->
+    <section class="service-lines" id="services">
         <div class="section-header">
-            <span class="section-tag">TV Mounting</span>
-            <h2>TV Mounting Done Right</h2>
-            <p>This is what we do best. Samsung, LG, and Sony TVs mounted on drywall, plaster, brick, stone, or above your fireplace. We show up with the right bracket, the right tools, and we don't leave until it's perfect.</p>
+            <span class="section-tag">What We Do</span>
+            <h2>Three Service Lines. One Call.</h2>
+            <p>TV mounting, furniture assembly, and bulb &amp; battery maintenance &mdash; all across Fairfield County, same-day available.</p>
         </div>
-        <div class="services-grid">
-            <div class="service-card">
-                <div class="service-icon">🖼️</div>
-                <h3>Samsung Frame Installation</h3>
-                <p>The Frame is supposed to look like art when it's off, but only if it's mounted perfectly flush to the wall. We do the no-gap mount, hide the One Connect box somewhere smart, and run all cables invisibly. When it's displaying art, your guests won't know it's a TV. When it's on, it's a gorgeous 4K display. That's the whole point of spending the extra money on a Frame.</p>
+        <div class="service-lines-grid">
+            <div class="service-line-card">
+                <a href="/tv-mounting-greenwich-ct/" class="service-line-link">
+                    <div class="service-line-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" width="36" height="36"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                    </div>
+                    <h3>TV Mounting</h3>
+                    <p>Samsung Frame installs, OLED and large format mounting, full cable concealment. On drywall, plaster, stone, brick, or above your fireplace. 550+ TVs mounted across Fairfield County.</p>
+                    <span class="service-line-cta">See TV Mounting &rarr;</span>
+                </a>
             </div>
-            <div class="service-card">
-                <div class="service-icon">📱</div>
-                <h3>OLED & Large Format TVs</h3>
-                <p>LG OLED, Sony Bravia, and Samsung Neo QLED TVs are expensive and need to be mounted right the first time. We use heavy duty anchors, hit the studs, and make sure it's rock solid. We've mounted 65", 75", 77", and 85" screens. Your $3,000 TV deserves better than a wobbly mount from the big box store.</p>
+            <div class="service-line-card">
+                <a href="/furniture-assembly/" class="service-line-link">
+                    <div class="service-line-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" width="36" height="36"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+                    </div>
+                    <h3>Furniture Assembly</h3>
+                    <p>IKEA, Wayfair, Pottery Barn, West Elm, and everything in between. We show up, we build it, we position it exactly where you want it. Save your Saturday.</p>
+                    <span class="service-line-cta">See Furniture Assembly &rarr;</span>
+                </a>
             </div>
-            <div class="service-card">
-                <div class="service-icon">🔌</div>
-                <h3>Cable Concealment</h3>
-                <p>Nobody wants to see a mess of cables hanging below their beautiful mounted TV. We run power and HDMI through the wall when possible, install outlets behind the TV, and use paintable cord covers when in-wall isn't doable. Clean lines, no visible wires, no mess.</p>
+            <div class="service-line-card">
+                <a href="/bulb-and-battery/" class="service-line-link">
+                    <div class="service-line-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" width="36" height="36"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+                    </div>
+                    <h3>Bulb &amp; Battery</h3>
+                    <p>High-ceiling bulb replacements, smoke detector battery swaps and full unit replacements. Residential and commercial. Same-day available &mdash; including that 3am chirp.</p>
+                    <span class="service-line-cta">See Bulb &amp; Battery &rarr;</span>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Other Services -->
-    <section class="other-services">
+    <!-- TV Mounting Detail -->
+    <section class="services">
         <div class="section-header">
-            <span class="section-tag">Other Services</span>
-            <h2>More Than Just TVs</h2>
-            <p>TV mounting is our specialty, but we handle the other stuff too.</p>
+            <span class="section-tag">TV Mounting</span>
+            <h2>TV Mounting Done Right</h2>
+            <p>Samsung, LG, and Sony TVs mounted on drywall, plaster, brick, stone, or above your fireplace. We show up with the right bracket, the right tools, and we don't leave until it's perfect.</p>
         </div>
-        <div class="other-services-grid">
-            <div class="other-service-card">
-                <h4>Smart Home Setup</h4>
-                <p>Nest thermostats, Ring doorbells, smart locks, security cameras. We install it, connect it to your WiFi, and actually show you how to use the app before we leave. No YouTube tutorials required.</p>
+        <div class="services-grid">
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" width="32" height="32"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                </div>
+                <h3>Samsung Frame Installation</h3>
+                <p>The Frame is supposed to look like art when it's off, but only if it's mounted perfectly flush to the wall. We do the no-gap mount, hide the One Connect box somewhere smart, and run all cables invisibly. When it's displaying art, your guests won't know it's a TV.</p>
             </div>
-            <div class="other-service-card">
-                <h4>Furniture Assembly</h4>
-                <p>IKEA, Wayfair, Pottery Barn, and West Elm. Save your Saturday (and your sanity). We'll have it built and positioned exactly where you want it. Life's too short for confusing instruction manuals.</p>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" width="32" height="32"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9,22 9,12 15,12 15,22"/></svg>
+                </div>
+                <h3>OLED &amp; Large Format TVs</h3>
+                <p>LG OLED, Sony Bravia, and Samsung Neo QLED TVs need to be mounted right the first time. We use heavy duty anchors, hit the studs, and make sure it's rock solid. We've mounted 65", 75", 77", and 85" screens.</p>
             </div>
-            <div class="other-service-card">
-                <h4>Shelves, Art & Mirrors</h4>
-                <p>Floating shelves, gallery walls, heavy mirrors, that oversized piece you've been afraid to hang. We find the studs, use the right anchors, and make sure it's perfectly level. No crooked art on our watch.</p>
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" width="32" height="32"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+                </div>
+                <h3>Cable Concealment</h3>
+                <p>We run power and HDMI through the wall when possible, install outlets behind the TV, and use paintable cord covers when in-wall isn't doable. Clean lines, no visible wires, no mess.</p>
             </div>
         </div>
     </section>
@@ -1064,17 +547,17 @@
             <div class="step">
                 <div class="step-number">1</div>
                 <h4>Call or Text Us</h4>
-                <p>Tell us what you need mounted and where you are. We'll give you a price right over the phone and lock in your appointment. Takes about 60 seconds.</p>
+                <p>Tell us what you need and where you are. We'll give you a price right over the phone and lock in your appointment. Takes about 60 seconds.</p>
             </div>
             <div class="step">
                 <div class="step-number">2</div>
                 <h4>We Show Up When We Say We Will</h4>
-                <p>No four-hour windows or "sometime between 10 and 6" nonsense. We give you a real time window and stick to it. Our tech shows up ready to work.</p>
+                <p>No four-hour windows. We give you a real time window and stick to it. Our tech shows up ready to work.</p>
             </div>
             <div class="step">
                 <div class="step-number">3</div>
                 <h4>Job Done Right, Mess Cleaned Up</h4>
-                <p>We mount your TV, test everything, clean up our mess, and make sure you're happy with the work before we pack up and head out.</p>
+                <p>We do the work, test everything, clean up, and make sure you're happy before we pack up and head out.</p>
             </div>
         </div>
     </section>
@@ -1088,19 +571,54 @@
         <div class="features-grid">
             <div class="feature-item">
                 <h4>We Treat Your Home Like Our Own</h4>
-                <p>Shoe covers, drop cloths, and furniture protection. We treat every home like it's our grandmother's house. We're careful with your stuff and we clean up our mess before we leave. You shouldn't have to vacuum after we're done.</p>
+                <p>Shoe covers, drop cloths, and furniture protection. We're careful with your stuff and we clean up our mess before we leave.</p>
             </div>
             <div class="feature-item">
-                <h4>We Actually Show Up When We Say We Will</h4>
-                <p>You've probably been burned by a handyman who never called back. We answer our phone, confirm appointments the day before, and show up on time. Revolutionary concept, we know.</p>
+                <h4>We Actually Show Up On Time</h4>
+                <p>We answer our phone, confirm appointments the day before, and show up on time. Revolutionary concept, we know.</p>
             </div>
             <div class="feature-item">
                 <h4>No Surprise Charges</h4>
-                <p>We quote the job upfront and stick to it. No "well, actually" moments once we see your setup. No hidden fees for "difficult mounting conditions." The price we quote is what you pay.</p>
+                <p>We quote the job upfront and stick to it. No hidden fees. The price we quote is what you pay.</p>
             </div>
             <div class="feature-item">
                 <h4>Same-Day Service Available</h4>
-                <p>Got a new TV sitting in the box and need it up today? Call us. We keep same-day slots open because sometimes you just need it handled right now. Life's too short to stare at a TV on the floor.</p>
+                <p>Need it done today? Call us. We keep same-day slots open because sometimes you just need it handled right now.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="reviews" id="reviews">
+        <div class="section-header">
+            <span class="section-tag">What Customers Say</span>
+            <h2>Real Jobs, Real Feedback</h2>
+            <p>From Greenwich waterfront condos to Darien colonials &mdash; here's what our customers say.</p>
+        </div>
+        <div class="reviews-grid">
+            <div class="review-card">
+                <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="review-text">"Had a 77&rdquo; Samsung Frame mounted above our fireplace. They got the One Connect box hidden perfectly and ran every cable through the wall. Looks like it was built into the house."</p>
+                <div class="review-author">
+                    <div class="review-avatar">JM</div>
+                    <div><div class="review-name">James M.</div><div class="review-location">Greenwich, CT</div></div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="review-text">"Booked same-day, showed up on time, mounted the LG OLED and set up our Sonos soundbar. Cleaned up everything. No drywall dust left behind. I'll call them for anything going forward."</p>
+                <div class="review-author">
+                    <div class="review-avatar">SR</div>
+                    <div><div class="review-name">Sarah R.</div><div class="review-location">Darien, CT</div></div>
+                </div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <p class="review-text">"<a href="/furniture-assembly/" style="color:inherit;text-decoration:underline;text-underline-offset:2px;">Assembled a full Pottery Barn sectional</a> and two side tables in about 90 minutes. Price was exactly what they quoted. No surprise charges. Easiest home service experience I've had."</p>
+                <div class="review-author">
+                    <div class="review-avatar">KL</div>
+                    <div><div class="review-name">Karen L.</div><div class="review-location">Westport, CT</div></div>
+                </div>
             </div>
         </div>
     </section>
@@ -1112,30 +630,28 @@
             <h2>Towns We Serve</h2>
         </div>
         <div class="areas-grid">
-            <span class="area-tag">Greenwich</span>
-            <span class="area-tag">Darien</span>
-            <span class="area-tag">Westport</span>
-            <span class="area-tag">New Canaan</span>
-            <span class="area-tag">Stamford</span>
-            <span class="area-tag">Norwalk</span>
+            <a href="/tv-mounting-greenwich-ct/" class="area-tag">Greenwich</a>
+            <a href="/tv-mounting-darien-ct/" class="area-tag">Darien</a>
+            <a href="/tv-mounting-westport-ct/" class="area-tag">Westport</a>
+            <a href="/tv-mounting-new-canaan-ct/" class="area-tag">New Canaan</a>
+            <a href="/tv-mounting-stamford-ct/" class="area-tag">Stamford</a>
+            <a href="/tv-mounting-norwalk-ct/" class="area-tag">Norwalk</a>
+            <a href="/tv-mounting-cos-cob-ct/" class="area-tag">Cos Cob</a>
+            <a href="/tv-mounting-old-greenwich-ct/" class="area-tag">Old Greenwich</a>
+            <a href="/tv-mounting-riverside-ct/" class="area-tag">Riverside</a>
+            <a href="/tv-mounting-rowayton-ct/" class="area-tag">Rowayton</a>
+            <a href="/tv-mounting-wilton-ct/" class="area-tag">Wilton</a>
+            <a href="/tv-mounting-weston-ct/" class="area-tag">Weston</a>
             <span class="area-tag">Westchester County</span>
-            <span class="area-tag">Cos Cob</span>
-            <span class="area-tag">Old Greenwich</span>
-            <span class="area-tag">Riverside</span>
-            <span class="area-tag">Rowayton</span>
-            <span class="area-tag">Wilton</span>
-            <span class="area-tag">Weston</span>
         </div>
-        <p class="areas-subtext">
-            Based in Lower Fairfield County and Westchester County. If you're nearby, we can get to you.
-        </p>
+        <p class="areas-subtext">Based in Lower Fairfield County and Westchester County. If you're nearby, we can get to you.</p>
     </section>
 
     <!-- CTA Banner -->
     <section class="cta-banner">
         <h2>Ready to Get It Done?</h2>
         <p>Call or text us. We answer quickly and help you book the right appointment.</p>
-        <p class="subtext">7 days a week • Same-day appointments available</p>
+        <p class="subtext">7 days a week &bull; Same-day appointments available</p>
         <div class="cta-buttons">
             <a href="tel:+14755007126" class="phone-btn">
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
@@ -1148,28 +664,40 @@
 
     <!-- Footer -->
     <footer>
-        <div class="footer-brand">
-            <a href="#top" class="logo">
-                <img src="/ahp-logo.png" alt="Alliance Handyman Pros logo">
-                <div class="logo-text">Alliance <span>Handyman Pros</span></div>
-            </a>
-            <p class="footer-tagline">The TV Mounting Pros for Fairfield County</p>
-            <p class="footer-phone">(475) 500-7126</p>
-            <p class="footer-areas">Greenwich • Darien • Westport • New Canaan • Stamford • Norwalk • Westchester County • Cos Cob • Old Greenwich • Riverside • Rowayton • Wilton • Weston</p>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="logo">Alliance <span style="color:#f97316;">Handyman Pros</span></div>
+                <p class="footer-tagline">Home Service Pros for Fairfield County</p>
+            </div>
+            <div>
+                <p class="footer-col-title">Services</p>
+                <ul class="footer-links">
+                    <li><a href="#services">TV Mounting</a></li>
+                    <li><a href="/furniture-assembly/">Furniture Assembly</a></li>
+                    <li><a href="/bulb-and-battery/">Bulb &amp; Battery</a></li>
+                    <li><a href="#areas">Service Areas</a></li>
+                </ul>
+            </div>
+            <div>
+                <p class="footer-col-title">Contact</p>
+                <a href="tel:+14755007126" class="footer-phone">(475) 500-7126</a>
+                <p class="footer-hours">Mon&ndash;Sat 8am&ndash;6pm<br>Sunday by request<br>Same-day slots available</p>
+            </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2025 Alliance Handyman Pros. All rights reserved. Insured.</p>
+            <p>&copy; 2025 Alliance Handyman Pros. All rights reserved. Serving Greenwich, Darien, Westport, New Canaan &amp; Lower Fairfield County, CT.</p>
         </div>
     </footer>
 
     <script>
-        // Navbar scroll effect
         window.addEventListener('scroll', function() {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 50) {
                 navbar.classList.add('scrolled');
+                navbar.style.top = '0';
             } else {
                 navbar.classList.remove('scrolled');
+                navbar.style.top = '36px';
             }
         });
     </script>
