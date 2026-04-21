@@ -24,6 +24,10 @@ Last updated: 2026-04-21
 - [x] `/blog/baby-proofing-checklist-connecticut/`
 - [x] `/blog/tv-mounting-above-fireplace-connecticut/`
 - [x] `/blog/ikea-furniture-assembly-connecticut/`
+- [x] `/tv-mounting-connecticut/` — Rebuilt from thin hub to full service landing page (6 job types, pain points with data, wall types, pricing table, town grid, 7 FAQs)
+- [x] `/blog/tv-mounting-height-connecticut/` — TV mounting height guide (neck strain, THX/SMPTE standards, room-by-room, fireplace angle problem)
+- [x] `/blog/samsung-frame-tv-mounting-connecticut/` — Samsung Frame installation guide (VESA holes, Slim Fit mount, one-connect cable, above-fireplace considerations)
+- [x] `/blog/tv-mounting-plaster-walls-connecticut/` — Plaster wall TV mounting guide (3 methods, stud finder failure explanation, what not to do)
 - [x] Homepage `LocalBusiness` schema — `sameAs` linked to verified GBP, geo coordinates corrected, hours fixed, all services in `makesOffer`
 
 ---
@@ -180,6 +184,7 @@ Local backlinks from relevant, geographically-tied domains carry more ranking we
   - Target: "hide TV wires Connecticut" / "TV wire concealment Fairfield County"
   - Angle: in-wall vs. raceway, plaster wall options, fireplace surround concealment
   - Link to `/tv-mounting-connecticut/` 3x
+  - NOTE: tv-mounting-height, samsung-frame, and plaster-walls blogs already created (April 2026)
 
 - [ ] **`/blog/new-home-handyman-checklist-connecticut/`**
   - Target: "new home checklist Connecticut" / "moving in handyman Fairfield County"
