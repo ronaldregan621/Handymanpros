@@ -1,6 +1,6 @@
 # Alliance Handyman Pros — SEO and Content To-Do List
 
-Last updated: 2026-04-21
+Last updated: 2026-04-21 (Priority 4 blogs + Priority 5 town pages complete)
 
 ---
 
@@ -180,17 +180,15 @@ Local backlinks from relevant, geographically-tied domains carry more ranking we
 
 ## PRIORITY 4 — CONTENT (Blog Posts)
 
-- [ ] **`/blog/tv-wire-concealment-connecticut/`**
+- [x] **`/blog/tv-wire-concealment-connecticut/`**
   - Target: "hide TV wires Connecticut" / "TV wire concealment Fairfield County"
-  - Angle: in-wall vs. raceway, plaster wall options, fireplace surround concealment
-  - Link to `/tv-mounting-connecticut/` 3x
-  - NOTE: tv-mounting-height, samsung-frame, and plaster-walls blogs already created (April 2026)
+  - Angle: in-wall vs. raceway, plaster wall options, fireplace surround concealment, NEC Section 400.8
 
-- [ ] **`/blog/new-home-handyman-checklist-connecticut/`**
+- [x] **`/blog/new-home-handyman-checklist-connecticut/`**
   - Target: "new home checklist Connecticut" / "moving in handyman Fairfield County"
   - Cross-service capture — links to all service pages
 
-- [ ] **`/blog/picture-hanging-mirror-installation-connecticut/`**
+- [x] **`/blog/picture-hanging-mirror-installation-connecticut/`**
   - Target: "picture hanging service Connecticut" / "mirror installation Fairfield County"
   - Angle: plaster walls, heavy mirrors, gallery walls
 
@@ -200,10 +198,10 @@ Local backlinks from relevant, geographically-tied domains carry more ranking we
 
 assembly-furniture.com ranks with thin content and 45+ CT city pages. We outrank them on quality; we need to match them on volume.
 
-- [ ] **Furniture Assembly town pages** — Greenwich, Darien, Westport, Stamford first
-- [ ] **IKEA Assembly town pages** — same 4 towns, then expand
-- [ ] **Aging in Place town pages** — Greenwich, Darien, Westport
-- [ ] **Childproofing town pages** — Greenwich, Darien, Westport, Stamford
+- [x] **Furniture Assembly town pages** — Greenwich, Darien, Westport, Stamford
+- [x] **IKEA Assembly town pages** — Greenwich, Darien, Westport, Stamford
+- [x] **Aging in Place town pages** — Greenwich, Darien, Westport
+- [x] **Childproofing town pages** — Greenwich, Darien, Westport, Stamford
 
 ---
 
