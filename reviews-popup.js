@@ -97,7 +97,12 @@
   });
 
   // ---- helpers ----------------------------------------------------------
-  function firstName(n) { return String(n).trim().split(/\s+/)[0]; }
+  function firstName(n) {
+    n = String(n).trim();
+    // Drop a trailing single-letter initial ("James M." -> "James",
+    // "La Kesha L." -> "La Kesha"); leave single names ("Chris") untouched.
+    return n.replace(/\s+[A-Za-z]\.?$/, "").trim() || n;
+  }
 
   function relTime(dateStr) {
     if (!dateStr) return "";
