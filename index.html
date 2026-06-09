@@ -819,5 +819,13 @@
       load();
     })();
     </script>
+
+    <!-- ===================== Review popup toasts (NiceJob-style) =====================
+      Slides recent Google reviews up from the bottom-left corner on a loop.
+      Data (reviews-popup-data.js) is generated from the "AHP Website Reviews"
+      Google Sheet by sync-reviews-popup.py. Widget stays hidden if there are no
+      reviews. To change reviews: edit the Sheet, re-run the sync, commit & push. -->
+    <script src="reviews-popup-data.js"></script>
+    <script src="reviews-popup.js" defer></script>
 </body>
 </html>
