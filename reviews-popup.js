@@ -11,10 +11,14 @@
 (function () {
   "use strict";
 
+  var MAX_AGE_DAYS = 90;   // only show reviews from the last N days (rolling window); set 0 to show all
   var REVIEWS = (window.AHP_REVIEWS_POPUP || []).filter(function (r) {
-    return r && r.name && r.text;
+    if (!(r && r.name && r.text)) return false;
+    if (!MAX_AGE_DAYS) return true;
+    var t = Date.parse(r.date);
+    return isNaN(t) || (Date.now() - t) / 86400000 <= MAX_AGE_DAYS;  // keep undated; drop older than the window
   });
-  if (!REVIEWS.length) return;                       // nothing to show -> stay invisible
+  if (!REVIEWS.length) return;                       // nothing recent -> stay invisible
   if (sessionStorage.getItem("ahpPopupClosed") === "1") return;  // user dismissed this session
 
   // ---- config -----------------------------------------------------------
