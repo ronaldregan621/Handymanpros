@@ -612,8 +612,16 @@
             <span class="section-tag">What Customers Say</span>
             <h2>Real Jobs, Real Feedback</h2>
             <p>Real jobs, real homes, real feedback. Here's what customers say.</p>
+            <!-- Live Google rating summary (populated by the reviews widget) -->
+            <a id="reviews-rating" href="https://www.google.com/maps/place/Alliance+Handyman+Pros/@41.0624245,-73.6005265,10z/data=!3m1!4b1!4m6!3m5!1s0x8ceb561c7f567f55:0xf27ff12b8ff4a93c!8m2!3d41.0624245!4d-73.6005265!16s%2Fg%2F11mzt3kt3p" target="_blank" rel="noopener" style="display:none; align-items:center; gap:.6rem; justify-content:center; margin-top:1rem; text-decoration:none; color:#1a1a1a; font-size:.95rem;">
+                <img src="https://www.google.com/favicon.ico" alt="Google" width="20" height="20" style="display:block;">
+                <span id="reviews-rating-value" style="font-weight:700;"></span>
+                <span id="reviews-rating-stars" style="color:#f97316; letter-spacing:2px;"></span>
+                <span id="reviews-rating-count" style="color:#6b7280;"></span>
+            </a>
         </div>
-        <div class="reviews-grid">
+        <!-- data-state="fallback" until the live Google widget swaps in real reviews -->
+        <div class="reviews-grid" id="reviews-grid" data-state="fallback">
             <div class="review-card">
                 <div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
                 <p class="review-text">"Had a 77&rdquo; Samsung Frame mounted above our fireplace. They got the One Connect box hidden perfectly and ran every cable through the wall. Looks like it was built into the house."</p>
@@ -638,6 +646,9 @@
                     <div><div class="review-name">Karen L.</div><div class="review-location">Westport, CT</div></div>
                 </div>
             </div>
+        </div>
+        <div style="text-align:center; margin-top:2.5rem;">
+            <a id="reviews-google-link" href="https://www.google.com/maps/place/Alliance+Handyman+Pros/@41.0624245,-73.6005265,10z/data=!3m1!4b1!4m6!3m5!1s0x8ceb561c7f567f55:0xf27ff12b8ff4a93c!8m2!3d41.0624245!4d-73.6005265!16s%2Fg%2F11mzt3kt3p" target="_blank" rel="noopener" style="color:var(--orange); font-weight:600; text-decoration:none;">Read all our reviews on Google &rarr;</a>
         </div>
     </section>
 
@@ -704,6 +715,109 @@
                 navbar.style.top = '36px';
             }
         });
+    </script>
+
+    <!-- ===================== Live Google Reviews widget ===================== -->
+    <!--
+      Pulls live reviews from Google and renders them into the .reviews-grid above.
+      The API key is NOT stored in this file. It lives in /Documents/Agent 51/.env.shared
+      (AHP_PLACES_API_KEY / AHP_PLACES_ID) and is injected into the generated
+      reviews-config.js by sync-reviews-config.py before each deploy.
+      If reviews-config.js is missing or the key is blank, the three hardcoded
+      fallback reviews above stay shown.
+    -->
+    <script>
+      // Defaults — key/placeId are filled in by the generated reviews-config.js below.
+      window.AHP_REVIEWS_CONFIG = {
+        apiKey: "",
+        placeId: "",
+        textQuery: "Alliance Handyman Pros, Connecticut",
+        minRating: 4,                                // only show 4-5 star reviews
+        maxReviews: 6
+      };
+    </script>
+    <!-- Generated from .env.shared by sync-reviews-config.py (safe: key is HTTP-referrer restricted) -->
+    <script src="reviews-config.js"></script>
+    <script>
+    (function () {
+      var cfg = window.AHP_REVIEWS_CONFIG || {};
+      if (!cfg.apiKey) return; // no key yet -> keep the hardcoded fallback cards
+
+      // Official Google Maps JS dynamic library loader
+      (g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({key: cfg.apiKey, v: "weekly"});
+
+      function esc(s){return String(s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;");}
+      function initials(name){return (name||"").split(/\s+/).filter(Boolean).map(w=>w[0]).slice(0,2).join("").toUpperCase()||"G";}
+
+      function reviewCard(r){
+        var name = (r.authorAttribution && r.authorAttribution.displayName) || "Google User";
+        var rating = Math.round(r.rating || 5);
+        var stars = "★".repeat(rating);
+        var txt = (r.text && (r.text.text || r.text)) || "";
+        txt = txt.trim();
+        if (txt.length > 280) txt = txt.slice(0, 277).trim() + "…";
+        var when = r.relativePublishTimeDescription || "Verified Google review";
+        return '<div class="review-card">'
+             +   '<div class="review-stars">' + stars + '</div>'
+             +   '<p class="review-text">"' + esc(txt) + '"</p>'
+             +   '<div class="review-author">'
+             +     '<div class="review-avatar">' + esc(initials(name)) + '</div>'
+             +     '<div><div class="review-name">' + esc(name) + '</div>'
+             +     '<div class="review-location">' + esc(when) + '</div></div>'
+             +   '</div>'
+             + '</div>';
+      }
+
+      function render(place){
+        // Header rating summary
+        if (place.rating) {
+          var val = document.getElementById("reviews-rating-value");
+          var st  = document.getElementById("reviews-rating-stars");
+          var cnt = document.getElementById("reviews-rating-count");
+          var box = document.getElementById("reviews-rating");
+          if (val) val.textContent = Number(place.rating).toFixed(1);
+          if (st)  st.textContent  = "★".repeat(Math.round(place.rating));
+          if (cnt) cnt.textContent = place.userRatingCount ? ("· " + place.userRatingCount + " Google reviews") : "· Google";
+          if (box) box.style.display = "inline-flex";
+        }
+        // Point "see all" links at the real Google listing if available
+        if (place.googleMapsURI) {
+          ["reviews-rating","reviews-google-link"].forEach(function(id){
+            var el = document.getElementById(id); if (el) el.href = place.googleMapsURI;
+          });
+        }
+        // Swap in live review cards (keep fallback if fewer than 3 usable reviews)
+        var grid = document.getElementById("reviews-grid");
+        var reviews = (place.reviews || [])
+          .filter(function(r){ return (r.rating || 5) >= (cfg.minRating || 4) && (r.text && (r.text.text || r.text)); })
+          .sort(function(a,b){ return new Date(b.publishTime||0) - new Date(a.publishTime||0); })
+          .slice(0, cfg.maxReviews || 6);
+        if (grid && reviews.length >= 3) {
+          grid.innerHTML = reviews.map(reviewCard).join("");
+          grid.setAttribute("data-state","live");
+        }
+      }
+
+      async function load(){
+        try {
+          var places = await google.maps.importLibrary("places");
+          var Place = places.Place;
+          var place;
+          if (cfg.placeId) {
+            place = new Place({ id: cfg.placeId });
+          } else {
+            var res = await Place.searchByText({ textQuery: cfg.textQuery, fields: ["id"], maxResultCount: 1 });
+            if (!res.places || !res.places.length) return;
+            place = res.places[0];
+          }
+          await place.fetchFields({ fields: ["displayName","rating","userRatingCount","reviews","googleMapsURI"] });
+          render(place);
+        } catch (e) {
+          console.warn("AHP reviews widget:", e); // keep fallback cards on any failure
+        }
+      }
+      load();
+    })();
     </script>
 </body>
 </html>
