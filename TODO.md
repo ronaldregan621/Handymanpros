@@ -1,6 +1,45 @@
 # Alliance Handyman Pros — SEO and Content To-Do List
 
-Last updated: 2026-04-21 (Priority 4 blogs + Priority 5 town pages complete)
+Last updated: 2026-06-15
+
+---
+
+## OPERATIONS
+
+- [ ] **⚙ INFRA / BILLING — Upgrade Railway to the Hobby plan (~$5/mo) so the data-lake sync keeps running**
+  - **Why:** On 2026-06-14 the AHP data-lake sync was moved off the laptop to **Railway** (service `ahp-datalake-sync`, project `gentle-benevolence`) so it survives the Mac sleeping — that was the root cause of the dashboard going stale (18h, and an earlier ~2-day outage). The Railway account is currently on a **TRIAL**. When trial credits run out the worker stops, the data lake stops updating, and **every dashboard tile (MTD revenue, jobs, calls, projected EOM) silently goes stale/inaccurate.**
+  - **How:** railway.com → workspace `ronaldregan621's Projects` → upgrade to **Hobby (~$5/mo)**. Check current credit/usage at railway.com/account/usage. The worker is tiny (a mostly-idle 30-min Python loop) so it sits well inside the Hobby allowance.
+  - **Owner:** USER — billing/card action (Claude can't add a payment method). Time-sensitive: do before trial credits expire.
+
+- [ ] **★ TOP PRIORITY — Get Google Business Profile API access (unlocks real review text + automated NiceJob-style popups)**
+  - **Why:** The homepage reviews widget is live and shows our real **4.9★ / 17 reviews** summary (pulled live from the Places API). But Google's public Places API returns **zero review _text_** for our listing — only the rating and count. So we cannot automate the little review blurbs / pop-ups (the "Amy just left us a 5-star review" toasts) from it. The **only** Google source that returns full review content (author, rating, date, body) is the **Business Profile API**, and only to the verified owner account.
+  - **What we need, in order:**
+    1. Enable the Business Profile APIs on project `ahp-analytics-493205` (one `gcloud services enable` command — can do anytime).
+    2. Re-auth gcloud as the owner **with the review scope** (current login has cloud scopes but NOT `business.manage`, so review calls 403):
+       `gcloud auth login alliancehandymanpros@gmail.com --scopes="https://www.googleapis.com/auth/business.manage,https://www.googleapis.com/auth/cloud-platform"`
+    3. **Request Business Profile API access from Google** (allowlist application) — review text lives in the gated `mybusiness.googleapis.com/v4/.../reviews` endpoint. **Approval takes days to weeks — this is the long pole, so start it now.**
+  - **Payoff:** auto-pull every review (text + author + date) → feed the homepage popup automatically. Free, on our own brand, no NiceJob subscription, no manual upkeep.
+  - **Interim (in progress now):** manual Google-Sheet-driven popup — we maintain reviews in a Sheet by hand and the site renders them. Swap the data source to this API once approved, with no other changes.
+
+- [ ] **Build #leads Slack channel — all AHP leads flow in real time**
+  - Create a dedicated `#ahp-leads` channel in Slack
+  - Wire every lead source to post an alert the moment a new lead arrives:
+    - **OpenPhone 475 line** — new inbound call or SMS fires an alert
+    - **Zenbooker** — new booking or inquiry fires an alert
+    - **Thumbtack** — new lead notification fires an alert (via Zapier or Pipedream webhook)
+    - **Google LSA** — new lead email triggers an alert
+  - Alert should include: source, name/phone if available, first message or job type, timestamp
+  - Goal: zero lag between lead arriving and team awareness — speed to lead is the single highest-leverage conversion lever in a service business
+
+- [x] **Go live with live Google reviews on the homepage** (NiceJob-style) — *rating summary shipped 2026-06-08*
+  - **Live now:** homepage shows a live **"Google 4.9 ★ · 17 reviews"** badge, pulled client-side via the Maps JS Places API. Referrer-locked key `AHP_PLACES_API_KEY` + pinned `AHP_PLACES_ID=ChIJVX9WfxxW64wRPKn0jyvxf_I` in `.env.shared`; injected via `sync-reviews-config.py` → `reviews-config.js` (committed across homepage + 67 sub/blog pages). Key created via gcloud (no billing card was needed after all).
+  - **NOTE — Place ID must stay pinned:** our listing does NOT surface in Places text search (service-area business, hidden address); the Place ID was derived from the feature ID embedded in the site's "Read on Google" links. Name-based fallback resolution will never work.
+  - **What's NOT done:** the three review _cards_ still show curated/hardcoded text because the Places API returns no review bodies. Real review blurbs + popups depend on the **★ TOP PRIORITY** Business Profile API item above (interim: manual Sheet-driven popup).
+
+- [ ] **Investigate the live review-count discrepancy — badge shows "8 Google reviews," should be ~17**
+  - **What:** On 2026-06-22 the live homepage badge read **4.9★ · 8 Google reviews**, but the actual GBP listing has ~17. The 4.9★ rating is correct; only the count is off.
+  - **Likely cause:** Google's Places API (New) `userRatingCount` drifts from / undercounts what the Maps profile shows — common for service-area businesses with a hidden address. Not a bug in our code (we render whatever the API returns).
+  - **Check:** call `places.googleapis.com/v1/places/ChIJVX9WfxxW64wRPKn0jyvxf_I?fields=rating,userRatingCount` directly and confirm the API itself is returning 8; if so it's Google-side. Decide whether to (a) live with it, (b) hardcode the true count in the badge, or (c) source the count from the Business Profile API once approved (the **★ TOP PRIORITY** item — that returns the true count + text and fixes this for good).
 
 ---
 
@@ -207,13 +246,14 @@ assembly-furniture.com ranks with thin content and 45+ CT city pages. We outrank
 
 ## FUTURE IDEAS (Not Scheduled)
 
+- [ ] **Custom service icons via Kie AI** Replace the emoji placeholder icons on the offering cards (couch, framed art, TV, window, books, sparkles) with a matched set of custom branded icons generated in Kie AI. Cover every offering on the new segment pages and the service cards site wide: furniture assembly, art and mirror hanging, TV and Samsung Frame mounting, drapery and shade hardware, shelving and built in cabinetry, full install day setup, plus the core service pages. One consistent style, weight, and color so the whole site matches. Export as SVG or transparent PNG and swap into the icon slots.
+- [x] Commercial service page for property management (built: `/commercial-services-fairfield-county/`, 2026-06-29)
 - [ ] `/blog/curtain-rod-installation-connecticut/`
 - [ ] `/blog/shelf-installation-connecticut/`
 - [ ] `/blog/tv-mounting-no-studs-connecticut/`
 - [ ] `/blog/grab-bar-installation-connecticut/`
 - [ ] `/blog/baby-gate-installation-connecticut/`
 - [ ] `/blog/furniture-assembly-cost-connecticut/`
-- [ ] Commercial service page for property management
 - [ ] Westchester, NY expansion pages beyond White Plains
 
 ---
