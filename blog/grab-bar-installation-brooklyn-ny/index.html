@@ -461,5 +461,19 @@
   body{padding-bottom:64px}
 }
 </style>
+<script>
+(function(){
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href^="tel:"]') : null;
+    if(!a || typeof gtag!=='function') return;
+    gtag('event','phone_call_click',{
+      transport_type:'beacon',
+      link_url:a.getAttribute('href'),
+      page_path:location.pathname,
+      call_source: a.classList.contains('ahp-sticky-call') ? 'sticky_mobile_bar' : 'inline_button'
+    });
+  }, true);
+})();
+</script>
 </body>
 </html>
