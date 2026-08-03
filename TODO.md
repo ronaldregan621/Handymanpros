@@ -12,7 +12,7 @@ Last updated: 2026-06-15
   - **Owner:** USER — billing/card action (Claude can't add a payment method). Time-sensitive: do before trial credits expire.
 
 - [ ] **★ TOP PRIORITY — Get Google Business Profile API access (unlocks real review text + automated NiceJob-style popups)**
-  - **Why:** The homepage reviews widget is live and shows our real **4.9★ / 17 reviews** summary (pulled live from the Places API). But Google's public Places API returns **zero review _text_** for our listing — only the rating and count. So we cannot automate the little review blurbs / pop-ups (the "Amy just left us a 5-star review" toasts) from it. The **only** Google source that returns full review content (author, rating, date, body) is the **Business Profile API**, and only to the verified owner account.
+  - **Why:** The homepage reviews widget is live and shows our real **4.9★ / 9 reviews** summary (pulled live from the Places API). But Google's public Places API returns **zero review _text_** for our listing — only the rating and count. So we cannot automate the little review blurbs / pop-ups (the "Amy just left us a 5-star review" toasts) from it. The **only** Google source that returns full review content (author, rating, date, body) is the **Business Profile API**, and only to the verified owner account.
   - **What we need, in order:**
     1. Enable the Business Profile APIs on project `ahp-analytics-493205` (one `gcloud services enable` command — can do anytime).
     2. Re-auth gcloud as the owner **with the review scope** (current login has cloud scopes but NOT `business.manage`, so review calls 403):
@@ -32,7 +32,7 @@ Last updated: 2026-06-15
   - Goal: zero lag between lead arriving and team awareness — speed to lead is the single highest-leverage conversion lever in a service business
 
 - [x] **Go live with live Google reviews on the homepage** (NiceJob-style) — *rating summary shipped 2026-06-08*
-  - **Live now:** homepage shows a live **"Google 4.9 ★ · 17 reviews"** badge, pulled client-side via the Maps JS Places API. Referrer-locked key `AHP_PLACES_API_KEY` + pinned `AHP_PLACES_ID=ChIJVX9WfxxW64wRPKn0jyvxf_I` in `.env.shared`; injected via `sync-reviews-config.py` → `reviews-config.js` (committed across homepage + 67 sub/blog pages). Key created via gcloud (no billing card was needed after all).
+  - **Live now:** homepage shows a live **"Google 4.9 ★ · 9 reviews"** badge, pulled client-side via the Maps JS Places API. Referrer-locked key `AHP_PLACES_API_KEY` + pinned `AHP_PLACES_ID=ChIJVX9WfxxW64wRPKn0jyvxf_I` in `.env.shared`; injected via `sync-reviews-config.py` → `reviews-config.js` (committed across homepage + 67 sub/blog pages). Key created via gcloud (no billing card was needed after all).
   - **NOTE — Place ID must stay pinned:** our listing does NOT surface in Places text search (service-area business, hidden address); the Place ID was derived from the feature ID embedded in the site's "Read on Google" links. Name-based fallback resolution will never work.
   - **What's NOT done:** the three review _cards_ still show curated/hardcoded text because the Places API returns no review bodies. Real review blurbs + popups depend on the **★ TOP PRIORITY** Business Profile API item above (interim: manual Sheet-driven popup).
 

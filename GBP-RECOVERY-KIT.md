@@ -97,7 +97,7 @@ That high ceiling bulb you cannot reach, or the smoke detector chirping at 3am o
 
 ## 6. Review request (text the customer within 24 hours of the job)
 
-> Thanks for having us out today. If you have 30 seconds, a Google review makes a real difference for a small local team like ours: [PASTE GBP REVIEW LINK]
+> Thanks for having us out today. If you have 30 seconds, a Google review makes a real difference for a small local team like ours: https://g.page/r/CTyp9l8r8X_yEBM/review
 
 Get the short link from the GBP dashboard under "Ask for reviews." Target 2 to 3 new reviews per week. Review velocity beats total volume in 2026. Respond to every review within 48 hours.
 

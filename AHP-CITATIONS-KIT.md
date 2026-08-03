@@ -13,14 +13,14 @@ Service area:   Fairfield County, CT and Westchester, NY
 Address:        NONE — service-area business. Choose "I serve customers at their
                 location" / "hide my address" on every platform. Do NOT enter a
                 street address anywhere (a mismatched address hurts more than none).
-Hours:          Mon to Sat 8am to 6pm, Sun by request
+Hours:          Every day 8am to 11pm (matches Google Business Profile)
 Primary category: Handyman
 ```
 
 ## Business description (paste into the "about/description" field on each site)
 Alliance Handyman Pros is Fairfield County's install and mounting specialist, serving Greenwich, Darien, New Canaan, Westport, Stamford, Norwalk, Wilton, and the Westchester NY line. We handle TV mounting including Samsung Frame and above the fireplace installs, IKEA and furniture assembly, grab bar and handrail installation for aging in place, childproofing and furniture anchoring, and bulb and battery and smoke detector service. Every job is done by a background checked pro, and most days we have same day availability. Booking is online in under a minute with flat, upfront pricing that starts at $199 for a standard TV mount. Insured. Call or text 475 500 7126 or book at alliancehandymanpros.com.
 
-*(No dashes, per house style. Rated 4.9 stars across 17 Google reviews if a field asks.)*
+*(No dashes, per house style. Rated 4.9 stars across 9 Google reviews if a field asks.)*
 
 ---
 
