@@ -124,6 +124,8 @@ GBP is verified. These actions directly move map pack ranking. Whitespark 2026 d
 
 ## PRIORITY 1 — CITATION BUILDING (Off-Site, Quick, High Impact)
 
+> ✅ **Paste-ready kit built 2026-08-02: `AHP-CITATIONS-KIT.md`** — exact NAP block, business description, and step-by-step per platform (Apple Business Connect first for iPhone Maps, Bing Places one-click import from GBP, Yelp, Angi) plus BBB/Facebook/Nextdoor/Houzz and local chamber .orgs. Owner action: work the kit top to bottom, GBP first, identical NAP everywhere.
+
 Citations are NAP mentions (Name, Address, Phone) on trusted directories. They confirm to Google that the business is legitimate and consistent. The key: exact same business name, phone, and service area on every platform. Even "St." vs "Street" creates a mismatch.
 
 **Business name to use everywhere:** Alliance Handyman Pros  
