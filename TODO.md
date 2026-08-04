@@ -1,6 +1,14 @@
 # Alliance Handyman Pros — SEO and Content To-Do List
 
-Last updated: 2026-06-15
+Last updated: 2026-08-03
+
+---
+
+## CLEANUP / DATA CONSISTENCY (found during the 2026-08-03 overhaul, reconcile these)
+
+- [ ] **Reconcile the Google review COUNT across the site.** The aggregateRating schema added to 38 pages on 2026-08-02, and `llm.txt`, use `reviewCount` **17**. But the live homepage badge and the owner-edited GBP + citations kits now say **9**. Pick the true current number, then update it in one pass: the aggregateRating block on every page (grep `"reviewCount": "17"`), `llm.txt`, and the kits. Inconsistent rating markup vs the visible/GBP count is exactly what Google flags. *(The 4.9 rating value is fine, only the count is in question.)*
+- [ ] **Reconcile HOURS.** The site schema + `llm.txt` say Monday to Saturday 8am to 6pm, Sun by request. The GBP + owner-edited kits say **every day 8am to 11pm**. If GBP (8am to 11pm daily) is correct, update the site openingHoursSpecification schema, the utility bar copy, and `llm.txt` to match. If the site is correct, fix GBP. One source of truth. *(Same class of conflict flagged on ACJR: site 24/7 vs GBP.)*
+- [ ] **No-dashes sweep on the older aging-in-place pages.** `aging-in-place-greenwich-ct`, `-darien-ct`, `-westport-ct` still use hyphenated visible copy ("same-day", "ADA-compliant") that predates the no-dashes standard. Every page built since is clean; sweep these three to match.
 
 ---
 
