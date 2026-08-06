@@ -29,18 +29,24 @@ Alliance Handyman Pros is Fairfield County's install and mounting specialist, se
 
 ## 3. Services section (add each with a short description and price range)
 
-| Service | Description | Price range |
+Descriptions are keyword + location optimized (kept in sync with `GBP-SERVICES-FROM-SEARCH-DEMAND.md`). Google reads the service name and description as a relevance signal, so each one names the service the way people search it and a town we serve. Add these under **Edit services**, prioritized by your GBP Performance search terms.
+
+| Service | Description (keyword + town) | Price range |
 |---|---|---|
-| TV Mounting | Standard wall mount, level and secure, cables tidied | From $199 |
-| TV Above Fireplace | Masonry and stud work, safe height, heat clearance | From $299 |
-| Samsung Frame Installation | Slim fit mount, One Connect cable routed clean | From $249 |
-| IKEA Assembly | PAX, KALLAX, HEMNES, MALM, BESTA, BILLY and more | Flat rate |
-| Furniture Assembly | Wayfair, Pottery Barn, West Elm, Crate and Barrel | Flat rate |
-| Grab Bar Installation | Anchored into studs or tile, ADA height | From $235 |
-| Handrail Installation | Interior stair and hallway rails | Quoted |
-| Childproofing | Furniture anchoring, baby gates, outlet and cabinet locks | From $199 |
-| Smoke Detector Service | Install, relocate, and battery replacement | Quoted |
-| Bulb and Battery | High ceiling bulbs, detector batteries, hard to reach fixtures | Quoted |
+| Grab Bar Installation | Grab bar installation in Darien and Fairfield County, anchored into studs and tile at ADA height, load tested | From $235 |
+| Aging in Place Modifications | Aging in place modifications in Fairfield County, grab bars, handrails, and threshold ramps for seniors | From $235 |
+| IKEA Furniture Assembly | IKEA furniture assembly in Westport and Fairfield County, PAX wardrobes and complex builds, flat rate, wall anchored | Flat rate |
+| Childproofing | Childproofing and baby proofing in Fairfield County, furniture anchoring, baby gates, cabinet and outlet locks | From $199 |
+| TV Above Fireplace | TV mounting above the fireplace in Fairfield County, masonry drilling, safe viewing height, heat clearance | From $299 † |
+| Plaster Wall TV Mounting | TV mounting on plaster walls in Fairfield County older homes, the right anchors so the plaster does not crack | From $199 |
+| Samsung Frame Installation | Samsung Frame TV installation in Greenwich and Fairfield County, flush no gap mount, One Connect cable hidden | From $249 |
+| TV Mounting | TV mounting in Greenwich and Fairfield County on drywall, brick, and stone, cables hidden, same day when we have capacity | From $199 |
+| Furniture Assembly | Furniture assembly in Fairfield County, Wayfair, Pottery Barn, and West Elm, flat rate per visit, tall pieces anchored | Flat rate |
+| Handyman Small Jobs | Handyman for small jobs in Stamford and Fairfield County, flat upfront pricing, no hourly meter | Quoted |
+| Handrail Installation | Handrail installation in Fairfield County, interior stair and hallway rails anchored to studs | Quoted |
+| Bulb and Battery | High ceiling bulb replacement and smoke detector battery service across Fairfield County | Quoted |
+
+† **Price to reconcile:** this kit shows TV above the fireplace at From $299, but the website, cost pages, and llm.txt say From $249. Confirm the true number and make it consistent before publishing (see the CLEANUP section in TODO.md).
 
 ---
 
