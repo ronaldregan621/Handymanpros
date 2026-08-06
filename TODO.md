@@ -12,6 +12,33 @@ Last updated: 2026-08-03
 
 ---
 
+## AI SEARCH RETRIEVAL (GEO) — re-scoped from the plan after the 2026-08-06 Phase 0 audit
+
+Full findings in `audit-report.md`. The plan's Section 4 was stale: blog, FAQs, 25-town coverage, sitewide schema, and HTTPS internal links already exist (Phases 1/2/4/6 largely done). Goal is citation in AI answers, not rankings. **Baseline: AHP cited 2 of 10 target queries** (`ai-citation-baseline.md`, 2026-08-06) — only its 2 strongest TV pages; 0/10 on grab bar, IKEA, childproofing, aging in place, and cost/how-to queries. Real work below, in order.
+
+**Owner input needed first (gates the refactor):**
+- [ ] Confirm the true **review count** (schema says 17, badge/kits say 9) and **hours** (site Mon-Sat 8-6 vs GBP 8am-11pm) — see the CLEANUP section above. Blocks accurate schema.
+- [ ] Provide a **guide author name + role** (real human, for E-E-A-T bylines) and any **missing prices** for the guides. Do not invent either.
+
+**Quick wins (low effort, do now):**
+- [ ] **Flip GitHub Pages "Enforce HTTPS" ON** (repo Settings → Pages). Apex currently 301s to `http://` and `http://www` serves 200. Owner action, one checkbox. *(The plan's "http internal links" issue does not exist — 0 found.)*
+- [ ] **Add `llms.txt`** as an alias/copy of the current `llm.txt` (the plural is the emerging convention; `llm.txt` already live and accurate).
+- [ ] Optionally add explicit per-bot Allow blocks to robots.txt (plan Appendix A). Not required (`* Allow: /` already permits all AI bots); cosmetic/self-documenting.
+
+**The real work (retrieval-grade refactor, highest value):**
+- [ ] **Pilot the refactor on 3 top-intent pages first** (TV mounting cost, TV above the fireplace, grab bar placement): question-form H1 (`How much does X cost in <area>?`), a 40 to 75 word answer block immediately after the H1, decapitation-resistant sections (no "it/this/the service" openers), a comparison table per page. Measure, then roll the pattern across the 166.
+- [ ] **Build the guides corpus** (plan Phase 5): cost by size+wall, above-fireplace heat question, grab-bar placement to ADA, aging-in-place scope, childproofing checklist. Real standards citations (ADA, CPSC) with outbound links, visible "Last updated", `dateModified` wired to git commit date. Two touch safety (grab bars, childproofing) — cite real numbers, do not improvise.
+- [ ] **Retrofit the location + service pages** with the same answer-block + question-H1 pattern (content exists, structure is classic-SEO not chunk-retrieval).
+
+**Instrumentation + measurement (adapted for static GitHub Pages):**
+- [ ] **Bing Webmaster Tools** submission (disproportionately important — ChatGPT search leans on Bing's index). Pairs with the Bing Places citation item.
+- [ ] **IndexNow** — ping on publish so new/changed pages get picked up fast.
+- [ ] **GA4 AI-referral tracking** for chatgpt.com, perplexity.ai, claude.ai, gemini.google.com, copilot.microsoft.com.
+- [ ] **Re-run the citation baseline at 30 and 90 days** after the refactor ships: `python3 ai_citation_baseline.py <date>`. Add ChatGPT/Gemini engines once those API keys exist (only Perplexity + Anthropic keys today). *(NOTE: plan's Phase 8.1 server-log crawler parsing is NOT possible on GitHub Pages — no access logs. Needs Cloudflare in front or rely on Bing/GSC crawl stats.)*
+- [ ] **Retrieval linter as a GitHub Action** (plan Phase 7, adapted — there is no build step to fail): gate new pages on question-H1, answer-block length, decapitation openers, schema presence, thin-content. Put it in before the guides corpus so it can't be built wrong.
+
+---
+
 ## OPERATIONS
 
 - [ ] **⚙ INFRA / BILLING — Upgrade Railway to the Hobby plan (~$5/mo) so the data-lake sync keeps running**
