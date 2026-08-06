@@ -119,6 +119,10 @@ GBP is verified. These actions directly move map pack ranking. Whitespark 2026 d
   - Description (150–200 words, use these keywords naturally): TV mounting, IKEA furniture assembly, childproofing, baby proofing, aging in place, grab bars, Fairfield County, Greenwich, Darien, Westport, Stamford
   - Add website URL, hours (Mon–Sat 8am–6pm, Sun by request), phone, and service area cities
 
+- [ ] **★ Add GBP services from proven search demand (rank-higher-google tactic, added 2026-08-06)**
+  - **Paste-ready list: `GBP-SERVICES-FROM-SEARCH-DEMAND.md`** — 12 services named after real search phrases, each with a keyword + town description, ordered by opportunity from the AI-citation baseline (invisible-today services first: grab bar, IKEA, childproofing, aging in place, plaster/above-fireplace TV).
+  - **Owner step first:** open GBP → Performance → How people discovered you → search terms. Prioritize the paste list by YOUR real Performance volume, and add any searched term not already covered (real services only, keyword + town, no stuffing). Moves map pack in days.
+
 - [ ] **Add all services with descriptions in GBP Services section**
   - TV Mounting, Wall Mount Installation, TV Above Fireplace
   - IKEA Assembly, Furniture Assembly, Wayfair Assembly
