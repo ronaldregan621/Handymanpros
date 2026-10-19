@@ -1,8 +1,20 @@
 # Alliance Handyman Pros — SEO and Content To-Do List
 
-Last updated: 2026-08-03
+Last updated: 2026-10-14
 
 ---
+
+## 📺 TV MOUNTING GROWTH (found 2026-10-14)
+
+TV is the business: 21 of 29 Zenbooker jobs Feb to Oct 2026, avg invoice ~$450, biggest tickets in Greenwich.
+- [ ] **Site is NOT in Google Search Console on any of the 4 Google accounts** (domain and URL prefix both checked). Zero visibility into which TV searches we rank for. Add + verify on alliancehandymanpros@gmail.com.
+- [ ] **GA4 is dead** (401 on property 532684012, see master list `ol-012`). With GSC missing, there is no website measurement at all.
+- [ ] **Half of inbound calls to 475 go unanswered:** last 90 days 75 no answer vs 71 answered (includes spam and vendors, not filtered). August: 81 inbound calls, 44 unanswered, 1 job. Add missed call text back on 475 (AHP has no SMS agent; ACJR Alex is the pattern). **CORRECTED same day:** all 17 missed callers in the last 30 days got a callback or text afterward, so missed calls are NOT a leak; drop the missed call text back idea unless response speed is the issue.
+- [ ] Homepage H1 says "The Home Service Pros for Fairfield County"; title leads with TV mounting. Lead the H1 with TV mounting too.
+- [ ] Price conflict: site "from $199", Zenbooker drywall $135 base / $165 min (lowest real invoice $178.20 incl tax), Craigslist ad "starts at $99". One number.
+- [ ] tv-mounting-weston-ct and tv-mounting-white-plains-ny have no JSON-LD schema (the other town pages have 3 blocks).
+- [ ] New page: TV mounting Bronxville NY (a real GBP search term and a wealthy town).
+- [ ] Reviews: 9 total. Ask every TV customer, ask them to name their town.
 
 ## CLEANUP / DATA CONSISTENCY (found during the 2026-08-03 overhaul, reconcile these)
 
@@ -109,22 +121,36 @@ Full findings in `audit-report.md`. The plan's Section 4 was stale: blog, FAQs, 
 
 ## PRIORITY 0 — GBP OPTIMIZATION (Do This Week, No Code Required)
 
+> **✅ GBP FULL UPDATE DONE 2026-10-09.** Record: `AHP GBP Full Update October 9 2026.md`. Description rewritten (old one was REJECTED for containing the phone number), service area rebuilt from job data (18 areas incl. Fairfield County CT and The Bronx, Upper East Side removed), 13 services all described (added Aging in Place, Smart Home, Handyman Services), Week 1 post live + Oct 16/23/30 scheduled. Category stays Handyman + Bathroom remodeler (Google has no TV install or furniture assembly category).
+> **Finding:** every non brand Performance search term is Bronx/Yonkers/Bronxville; ZERO Fairfield County terms. Owner target is the wealthy Fairfield towns, so the levers below (reviews naming the town, photos, posts naming Greenwich/Darien/New Canaan/Westport, citations) now aim there.
+>
+> **Still open:**
+> - [ ] **OWNER:** TV above fireplace price: GBP $299 vs site/llm.txt $249 vs Zenbooker $250. One number everywhere.
+> - [ ] **OWNER:** keep or delete the Bathroom remodeler secondary category (AHP does not remodel bathrooms).
+> - [ ] November GBP posts (schedule ends Oct 30). Rules: no phone number in text, no dashes, Book button to site with utm_campaign=gbp_post, name Fairfield towns.
+> - [x] Job photos found 2026-10-14: photo sweep of the 475 line pulled 295 (`Alliance Handyman Pros/photo-sweep/`); 8 before and afters + 3 singles sent to Slack C0C87SJELJD for approval.
+> - [ ] **OWNER:** react ✅/❌ on the AHP photo post in Slack; approved ones become GBP photo posts naming the town (check no faces/family photos/addresses).
+> - [ ] Decide whether the AHP photo sweep runs on a schedule like AMS (Railway) or stays manual.
+> - [ ] Re check Performance search terms early November; did Fairfield terms appear?
+> - [ ] Q&A seeding and review request system below are still not done.
+
+
 GBP is verified. These actions directly move map pack ranking. Whitespark 2026 data: 8 of the top 10 local pack signals come from GBP itself. Review velocity beats review volume — a business with 80 recent reviews outranks one with 200 stale ones.
 
-- [ ] **Set primary GBP category to "Handyman"**
+- [x] **Set primary GBP category to "Handyman"** (done; secondary TV/furniture categories do not exist in Google)
   - Most specific match to actual services. Do not use "Contractor" or "Home Improvement."
   - Add secondary categories: TV Mounting Service, Furniture Assembly Service, Baby Proofing Service
 
-- [ ] **Complete every GBP field**
+- [x] **Complete every GBP field** (2026-10-09; hours on GBP are daily 8am to 11pm, site conflict still open above)
   - Businesses with fully completed profiles are 2.7x more likely to be viewed as reputable by Google
   - Description (150–200 words, use these keywords naturally): TV mounting, IKEA furniture assembly, childproofing, baby proofing, aging in place, grab bars, Fairfield County, Greenwich, Darien, Westport, Stamford
   - Add website URL, hours (Mon–Sat 8am–6pm, Sun by request), phone, and service area cities
 
-- [ ] **★ Add GBP services from proven search demand (rank-higher-google tactic, added 2026-08-06)**
+- [x] **★ Add GBP services from proven search demand (rank-higher-google tactic, added 2026-08-06)**
   - **Paste-ready list: `GBP-SERVICES-FROM-SEARCH-DEMAND.md`** — 12 services named after real search phrases, each with a keyword + town description, ordered by opportunity from the AI-citation baseline (invisible-today services first: grab bar, IKEA, childproofing, aging in place, plaster/above-fireplace TV).
   - **Owner step first:** open GBP → Performance → How people discovered you → search terms. Prioritize the paste list by YOUR real Performance volume, and add any searched term not already covered (real services only, keyword + town, no stuffing). Moves map pack in days.
 
-- [ ] **Add all services with descriptions in GBP Services section**
+- [x] **Add all services with descriptions in GBP Services section** (13 services, 2026-10-09)
   - TV Mounting, Wall Mount Installation, TV Above Fireplace
   - IKEA Assembly, Furniture Assembly, Wayfair Assembly
   - Childproofing, Baby Proofing, Baby Gate Installation, Furniture Anchoring
@@ -148,7 +174,7 @@ GBP is verified. These actions directly move map pack ranking. Whitespark 2026 d
     - "Are you available same day?" (Yes, most days we have same-day availability...)
   - These answers show in the listing and are indexed by Google
 
-- [ ] **Set up GBP weekly post cadence**
+- [ ] **Set up GBP weekly post cadence** (October scheduled through Oct 30; November needed)
   - One case study showed 21% increase in local search impressions after 3 months of weekly posts
   - Listings that go 30+ days without a post see measurable ranking drops in 2026
   - Post format: 1–2 per week, 100–150 words, one photo, one CTA button ("Book," "Call," "Learn More")

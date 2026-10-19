@@ -1,0 +1,5 @@
+# GitHub Pages: keep internal planning files in the repo but off the live site.
+# locations.json and towns.json stay public, pages fetch them at runtime.
+exclude:
+  - "*.md"
+  - research/
