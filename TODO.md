@@ -6,13 +6,16 @@ Last updated: 2026-10-14
 
 ## 📺 TV MOUNTING GROWTH (found 2026-10-14)
 
+- [x] 2026-10-19: pushed the Sep 14 commit that had never gone live (5 blog posts incl. handyman-bronx-ny, handyman-yonkers-ny, tv-installer-westchester-ny). Added `_config.yml` so internal .md files (this TODO, kits, research) stop being public at alliancehandymanpros.com/TODO.md. They were readable by anyone before.
+
 TV is the business: 21 of 29 Zenbooker jobs Feb to Oct 2026, avg invoice ~$450, biggest tickets in Greenwich.
-- [ ] **Site is NOT in Google Search Console on any of the 4 Google accounts** (domain and URL prefix both checked). Zero visibility into which TV searches we rank for. Add + verify on alliancehandymanpros@gmail.com.
+- [x] **Search Console set up 2026-10-19** on alliancehandymanpros@gmail.com (URL prefix property, auto verified through GA; keep the gtag code or it unverifies). Sitemap submitted (171 URLs).
+- [ ] **🔴 Most TV pages are NOT indexed by Google.** URL inspection 2026-10-19: homepage indexed; Greenwich, Darien, New Canaan, Stamford, /pricing/tv-mounting-cost/ = "Discovered, currently not indexed" (never crawled); Westport + the new Westchester and Bronx posts = "URL is unknown to Google". Indexing requested for all 8. Check the Pages report ~Oct 21. If pages stay unindexed, suspect near duplicate town templates and the client side locations.json rendering. (old note: Site is NOT in Google Search Console on any of the 4 Google accounts (domain and URL prefix both checked). Zero visibility into which TV searches we rank for. Add + verify on alliancehandymanpros@gmail.com.
 - [ ] **GA4 is dead** (401 on property 532684012, see master list `ol-012`). With GSC missing, there is no website measurement at all.
 - [ ] **Half of inbound calls to 475 go unanswered:** last 90 days 75 no answer vs 71 answered (includes spam and vendors, not filtered). August: 81 inbound calls, 44 unanswered, 1 job. Add missed call text back on 475 (AHP has no SMS agent; ACJR Alex is the pattern). **CORRECTED same day:** all 17 missed callers in the last 30 days got a callback or text afterward, so missed calls are NOT a leak; drop the missed call text back idea unless response speed is the issue.
-- [ ] Homepage H1 says "The Home Service Pros for Fairfield County"; title leads with TV mounting. Lead the H1 with TV mounting too.
+- [x] (2026-10-19) Homepage H1 now "TV Mounting and Home Installs for Fairfield County" + town links to Greenwich/Darien/New Canaan/Westport/Stamford/Rye TV pages. (was: Homepage H1 says "The Home Service Pros for Fairfield County"; title leads with TV mounting. Lead the H1 with TV mounting too.
 - [ ] Price conflict: site "from $199", Zenbooker drywall $135 base / $165 min (lowest real invoice $178.20 incl tax), Craigslist ad "starts at $99". One number.
-- [ ] tv-mounting-weston-ct and tv-mounting-white-plains-ny have no JSON-LD schema (the other town pages have 3 blocks).
+- [x] (2026-10-19) tv-mounting-weston-ct and tv-mounting-white-plains-ny have no JSON-LD schema (the other town pages have 3 blocks).
 - [ ] New page: TV mounting Bronxville NY (a real GBP search term and a wealthy town).
 - [ ] Reviews: 9 total. Ask every TV customer, ask them to name their town.
 
@@ -129,7 +132,10 @@ Full findings in `audit-report.md`. The plan's Section 4 was stale: blog, FAQs, 
 > - [ ] **OWNER:** keep or delete the Bathroom remodeler secondary category (AHP does not remodel bathrooms).
 > - [ ] November GBP posts (schedule ends Oct 30). Rules: no phone number in text, no dashes, Book button to site with utm_campaign=gbp_post, name Fairfield towns.
 > - [x] Job photos found 2026-10-14: photo sweep of the 475 line pulled 295 (`Alliance Handyman Pros/photo-sweep/`); 8 before and afters + 3 singles sent to Slack C0C87SJELJD for approval.
-> - [ ] **OWNER:** react ✅/❌ on the AHP photo post in Slack; approved ones become GBP photo posts naming the town (check no faces/family photos/addresses).
+> - [x] 2026-10-19: automatic posting built (`photo-sweep/ahp_gbp_autopost.py`, launchd 9/12/3/6). 10 photos re-sent to Slack C0C87SJELJD one per message.
+> - [ ] **OWNER:** submit Google's Business Profile API access request for project dogrunnearme (quota is 0 today; nothing can auto post until approved).
+> - [ ] **OWNER:** one sign in as alliancehandymanpros@gmail.com: `python3 "AMS COO/photo-sweep/tools/auth_business.py" ahp`.
+> - [ ] **OWNER:** react check mark / x on each of the 10 photo messages in Slack; approved ones become GBP photo posts naming the town (check no faces/family photos/addresses).
 > - [ ] Decide whether the AHP photo sweep runs on a schedule like AMS (Railway) or stays manual.
 > - [ ] Re check Performance search terms early November; did Fairfield terms appear?
 > - [ ] Q&A seeding and review request system below are still not done.
