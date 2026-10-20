@@ -14,7 +14,7 @@ TV is the business: 21 of 29 Zenbooker jobs Feb to Oct 2026, avg invoice ~$450, 
 - [x] GA4 works (verified 2026-10-19, ahp-analytics key). 87 sessions in the last 30 days, about 3 a day. That low traffic matches the indexing problem above.
 - [ ] **Half of inbound calls to 475 go unanswered:** last 90 days 75 no answer vs 71 answered (includes spam and vendors, not filtered). August: 81 inbound calls, 44 unanswered, 1 job. Add missed call text back on 475 (AHP has no SMS agent; ACJR Alex is the pattern). **CORRECTED same day:** all 17 missed callers in the last 30 days got a callback or text afterward, so missed calls are NOT a leak; drop the missed call text back idea unless response speed is the issue.
 - [x] (2026-10-19) Homepage H1 now "TV Mounting and Home Installs for Fairfield County" + town links to Greenwich/Darien/New Canaan/Westport/Stamford/Rye TV pages. (was: Homepage H1 says "The Home Service Pros for Fairfield County"; title leads with TV mounting. Lead the H1 with TV mounting too.
-- [ ] Price conflict: site "from $199", Zenbooker drywall $135 base / $165 min (lowest real invoice $178.20 incl tax), Craigslist ad "starts at $99". One number.
+- [x] Basic TV mount = $199 (owner chose the higher price 2026-10-19). Zenbooker TV Mounting Dry Wall minimum raised $165 to $199 (base $135 unchanged so bigger jobs do not move). Site, GBP and llm.txt already said $199. Quote machine snapshot `arty/deploy/ahp-pricebook.json` synced; goes live with the next gateway deploy. STILL WRONG: the Craigslist ad says "starts at $99" (owner edits it).
 - [x] (2026-10-19) tv-mounting-weston-ct and tv-mounting-white-plains-ny have no JSON-LD schema (the other town pages have 3 blocks).
 - [x] New page: TV mounting Bronxville NY, live 2026-10-19 (co op and Lawrence Park angle). Indexing request hit the daily quota: request it in Search Console on 2026-10-20.
 - [ ] Reviews: 9 total. Ask every TV customer, ask them to name their town.
@@ -129,12 +129,12 @@ Full findings in `audit-report.md`. The plan's Section 4 was stale: blog, FAQs, 
 >
 > **Still open:**
 > - [ ] **OWNER:** TV above fireplace price: GBP $299 vs site/llm.txt $249 vs Zenbooker $250. One number everywhere.
-> - [ ] **OWNER:** keep or delete the Bathroom remodeler secondary category (AHP does not remodel bathrooms).
+> - [x] Bathroom remodeler category REMOVED 2026-10-19 (owner decision). Handyman is the only category.
 > - [x] November GBP posts scheduled 2026-10-19: Greenwich Nov 6, Darien Nov 13, New Canaan Nov 20, Westport Nov 27, 9 AM, Book button to each town TV page. NEXT: December posts.
 > - [ ] (was) November GBP posts (schedule ends Oct 30). Rules: no phone number in text, no dashes, Book button to site with utm_campaign=gbp_post, name Fairfield towns.
 > - [x] Job photos found 2026-10-14: photo sweep of the 475 line pulled 295 (`Alliance Handyman Pros/photo-sweep/`); 8 before and afters + 3 singles sent to Slack C0C87SJELJD for approval.
 > - [x] 2026-10-19: automatic posting built (`photo-sweep/ahp_gbp_autopost.py`, launchd 9/12/3/6). 10 photos re-sent to Slack C0C87SJELJD one per message.
-> - [ ] **OWNER:** submit Google's Business Profile API access request for project dogrunnearme (quota is 0 today; nothing can auto post until approved).
+> - [x] Business Profile API access requested 2026-10-19 from alliancemaidservices@gmail.com (profile: AMS NY, project 326265107577). Google case 9-9034000041472, review 7 to 10 business days. Do NOT file a second request.
 > - [ ] **OWNER:** one sign in as alliancehandymanpros@gmail.com: `python3 "AMS COO/photo-sweep/tools/auth_business.py" ahp`.
 > - [ ] **OWNER:** react check mark / x on each of the 10 photo messages in Slack; approved ones become GBP photo posts naming the town (check no faces/family photos/addresses).
 > - [ ] Decide whether the AHP photo sweep runs on a schedule like AMS (Railway) or stays manual.
