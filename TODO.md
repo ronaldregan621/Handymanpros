@@ -137,7 +137,7 @@ Full findings in `audit-report.md`. The plan's Section 4 was stale: blog, FAQs, 
 > - [x] Business Profile API access requested 2026-10-19 from alliancemaidservices@gmail.com (profile: AMS NY, project 326265107577). Google case 9-9034000041472, review 7 to 10 business days. Do NOT file a second request.
 > - [ ] **OWNER:** one sign in as alliancehandymanpros@gmail.com: `python3 "AMS COO/photo-sweep/tools/auth_business.py" ahp`.
 > - [ ] **OWNER:** react check mark / x on each of the 10 photo messages in Slack; approved ones become GBP photo posts naming the town (check no faces/family photos/addresses).
-> - [ ] Decide whether the AHP photo sweep runs on a schedule like AMS (Railway) or stays manual.
+> - [x] ~~Decide whether the AHP photo sweep runs on a schedule~~ DONE 2026-10-19: Railway `ahp-photo-sweep`, nightly 11:45 PM ET, Drive "AHP Photo Dumps" on alliancehandymanpros@gmail.com (via Composio). 189 photos backfilled from Jan 1. Leo (203-391-8384) on the roster; his photos file under the job when it was the only job that day.
 > - [ ] Re check Performance search terms early November; did Fairfield terms appear?
 > - [ ] Q&A seeding and review request system below are still not done.
 
