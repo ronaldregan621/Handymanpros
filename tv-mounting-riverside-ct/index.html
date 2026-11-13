@@ -293,6 +293,7 @@
       </p>
       <div class="hero-ctas">
         <a href="tel:+14755007126" class="btn-primary">Call Now: (475) 500-7126</a>
+        <a href="sms:+14755007126" class="btn-secondary">Text us a photo for a price</a>
         <a href="https://widget.zenbooker.com/book/allaincehandymanpros?preselected-service=1767672699244x621257240939454600" class="btn-secondary" target="_blank" rel="noopener">Book Online</a>
       </div>
     </div>
@@ -500,6 +501,7 @@
         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
         (475) 500-7126
       </a>
+      <a href="sms:+14755007126" class="btn-secondary">Text us a photo for a price</a>
       <a href="https://widget.zenbooker.com/book/allaincehandymanpros?preselected-service=1767672699244x621257240939454600" class="btn-secondary" target="_blank" rel="noopener">Book Online</a>
     </div>
   </section>
@@ -544,11 +546,15 @@
       fetch('/locations.json').then(r=>r.ok?r.json():Promise.reject()).then(map=>{const rec=map[slug]; if(rec&&rec.seo)applySeo(rec.seo);}).catch(()=>{});
     })();
   </script>
-<a href="tel:+14755007126" class="ahp-sticky-call" aria-label="Call Alliance Handyman Pros now">Tap to Call &middot; (475) 500-7126</a>
+<div class="ahp-sticky-bar"><a href="tel:+14755007126" class="ahp-sticky-call" aria-label="Call Alliance Handyman Pros now">Call (475) 500-7126</a><a href="sms:+14755007126" class="ahp-sticky-text" aria-label="Text Alliance Handyman Pros a photo for a price">Text us a photo for a price</a></div>
 <style>
-.ahp-sticky-call{display:none}
+.ahp-sticky-bar{display:none}
+.cta-buttons,.hero-ctas,.hero-btns,.closing-btns,.cta-row,.cta-btns{flex-wrap:wrap}
 @media(max-width:768px){
-  .ahp-sticky-call{display:flex;align-items:center;justify-content:center;gap:.5rem;position:fixed;left:0;right:0;bottom:0;z-index:99999;background:#f97316;color:#fff;font-family:'Oswald',sans-serif,-apple-system,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;font-size:1.05rem;padding:1rem;text-decoration:none;box-shadow:0 -2px 14px rgba(0,0,0,.28)}
+  .ahp-sticky-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:99999;box-shadow:0 -2px 14px rgba(0,0,0,.28)}
+  .ahp-sticky-call,.ahp-sticky-text{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;font-family:'Oswald',sans-serif,-apple-system,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.5px;font-size:.85rem;line-height:1.25;padding:.8rem .6rem;min-height:64px;text-decoration:none}
+  .ahp-sticky-call{background:#f97316}
+  .ahp-sticky-text{background:#1a1a1a}
   body{padding-bottom:64px}
 }
 </style>

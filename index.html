@@ -580,6 +580,7 @@
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
                     Call Now: (475) 500-7126
                 </a>
+                <a href="sms:+14755007126" class="btn-secondary">Text us a photo for a price</a>
                 <a href="https://widget.zenbooker.com/book/allaincehandymanpros" class="btn-secondary" target="_blank" rel="noopener">Book Online</a>
             </div>
         </div>
@@ -616,7 +617,7 @@
 <section class="ahp-prices" id="prices">
   <div class="ahp-prices-inner">
     <h2>Our Prices</h2>
-    <p class="ahp-prices-sub">The same prices you see when you book online. All prices plus 8% sales tax.</p>
+    <p class="ahp-prices-sub">Listed prices are before 8% sales tax. You get an itemized total before anything is booked.</p>
     <div class="ahp-prices-grid">
       <div class="ahp-prices-card">
         <h3>TV Mounting</h3>
@@ -627,7 +628,7 @@
           <tr><td>Above the fireplace</td><td>from $250</td></tr>
           <tr><td>Samsung Frame</td><td>from $400</td></tr>
           <tr><td><a href="/outdoor-tv-mounting/">Outdoor TV</a></td><td>from $540</td></tr>
-          <tr><td><a href="/tv-remounting-relocation/">Take down, move or remount</a></td><td>text a photo</td></tr>
+          <tr><td><a href="/tv-remounting-relocation/">Take down, move or remount</a></td><td>from $165</td></tr>
         </table>
       </div>
       <div class="ahp-prices-card">
@@ -957,6 +958,7 @@
                 <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
                 Call Now
             </a>
+            <a href="sms:+14755007126" class="btn-secondary">Text us a photo for a price</a>
             <a href="https://widget.zenbooker.com/book/allaincehandymanpros" class="btn-secondary" target="_blank" rel="noopener">Book Online</a>
         </div>
         <div class="phone-btn" style="background: transparent; color: var(--white); font-size: 1.2rem; padding: 0; margin: 0;">(475) 500-7126</div>
@@ -1127,11 +1129,15 @@
       reviews. To change reviews: edit the Sheet, re-run the sync, commit & push. -->
     <script src="reviews-popup-data.js"></script>
     <script src="reviews-popup.js" defer></script>
-<a href="tel:+14755007126" class="ahp-sticky-call" aria-label="Call Alliance Handyman Pros now">Tap to Call &middot; (475) 500-7126</a>
+<div class="ahp-sticky-bar"><a href="tel:+14755007126" class="ahp-sticky-call" aria-label="Call Alliance Handyman Pros now">Call (475) 500-7126</a><a href="sms:+14755007126" class="ahp-sticky-text" aria-label="Text Alliance Handyman Pros a photo for a price">Text us a photo for a price</a></div>
 <style>
-.ahp-sticky-call{display:none}
+.ahp-sticky-bar{display:none}
+.cta-buttons,.hero-ctas,.hero-btns,.closing-btns,.cta-row,.cta-btns{flex-wrap:wrap}
 @media(max-width:768px){
-  .ahp-sticky-call{display:flex;align-items:center;justify-content:center;gap:.5rem;position:fixed;left:0;right:0;bottom:0;z-index:99999;background:#f97316;color:#fff;font-family:'Oswald',sans-serif,-apple-system,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;font-size:1.05rem;padding:1rem;text-decoration:none;box-shadow:0 -2px 14px rgba(0,0,0,.28)}
+  .ahp-sticky-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:99999;box-shadow:0 -2px 14px rgba(0,0,0,.28)}
+  .ahp-sticky-call,.ahp-sticky-text{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;font-family:'Oswald',sans-serif,-apple-system,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.5px;font-size:.85rem;line-height:1.25;padding:.8rem .6rem;min-height:64px;text-decoration:none}
+  .ahp-sticky-call{background:#f97316}
+  .ahp-sticky-text{background:#1a1a1a}
   body{padding-bottom:64px}
 }
 </style>
