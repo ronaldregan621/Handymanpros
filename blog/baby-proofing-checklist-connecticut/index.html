@@ -320,7 +320,7 @@
 
   <!-- Utility Bar -->
   <div class="utility-bar">
-    Fairfield County and Westchester &nbsp;|&nbsp; Call or text <a href="tel:+14755007126">(475) 500-7126</a> &nbsp;|&nbsp; <a href="https://widget.zenbooker.com/book/allaincehandymanpros" target="_blank" rel="noopener">Book Online</a>
+    Fairfield County and Westchester &nbsp;|&nbsp; Call or text <a href="tel:+14755007126">(475) 500-7126</a> &nbsp;|&nbsp; <a href="sms:+14755007126">Text us a photo for a flat-rate quote</a>
   </div>
 
   <!-- Nav -->
@@ -399,7 +399,7 @@
           <div class="cta-box">
             <h3>Want the Whole Checklist Done in an Afternoon?</h3>
             <p>Gates, cabinet locks, furniture anchors, and outlet covers installed correctly the first time.</p>
-            <a href="https://widget.zenbooker.com/book/allaincehandymanpros" target="_blank" rel="noopener" class="btn">Book Now</a>
+            <a href="sms:+14755007126" class="btn">Text us a photo for a flat-rate quote</a>
             <a href="tel:+14755007126" class="btn" style="margin-left:.6rem;background:transparent;border:2px solid var(--orange);color:var(--orange);">Call (475) 500-7126</a>
           </div>
 
@@ -463,7 +463,7 @@
           <div class="cta-box">
             <h3>Ready to Book a Childproofing Visit?</h3>
             <p>Our <a href="/childproofing/" style="color: var(--orange);">childproofing service</a> covers Fairfield County with same-day availability. One visit handles furniture anchoring, gates, cabinet locks, and outlet protection.</p>
-            <a href="https://widget.zenbooker.com/book/allaincehandymanpros" target="_blank" rel="noopener" class="btn">Schedule Online</a>
+            <a href="sms:+14755007126" class="btn">Text us a photo for a flat-rate quote</a>
           </div>
 
           <h2>Kitchen</h2>
@@ -561,7 +561,7 @@
             <h4>Book a Childproofing Visit</h4>
             <p>Same-day service across Fairfield County. We bring all hardware.</p>
             <a href="tel:+14755007126" class="phone">(475) 500-7126</a>
-            <a href="https://widget.zenbooker.com/book/allaincehandymanpros" target="_blank" rel="noopener" class="btn">Schedule Online</a>
+            <a href="sms:+14755007126" class="btn">Text us a photo for a flat-rate quote</a>
           </div>
         </aside>
 
@@ -607,7 +607,7 @@
     <div class="container">
       <h2>Your Baby Is Growing Faster Than You Think</h2>
       <p>Do not wait until they are crawling to start. Our childproofing team covers all of Fairfield County with same-day availability and brings every piece of hardware needed.</p>
-      <a href="https://widget.zenbooker.com/book/allaincehandymanpros" target="_blank" rel="noopener" class="btn-white">Book Online Now</a>
+      <a href="sms:+14755007126" class="btn-white">Text us a photo for a flat-rate quote</a>
       <a href="tel:+14755007126" class="btn-outline">Call (475) 500-7126</a>
     </div>
   </section>
@@ -622,7 +622,8 @@
         <a href="/bulb-and-battery/">Bulb and Battery</a>
         <a href="/aging-in-place/">Aging in Place</a>
         <a href="/childproofing/">Childproofing</a>
-      </div>
+      <a href="/faq/">FAQ</a>
+    </div>
       <p>Alliance Handyman Pros | Fairfield County, CT &amp; Westchester, NY &nbsp;|&nbsp; <a href="tel:+14755007126">(475) 500-7126</a></p>
     </div>
   </footer>
@@ -634,11 +635,15 @@
     });
   </script>
 
-<a href="tel:+14755007126" class="ahp-sticky-call" aria-label="Call Alliance Handyman Pros now">Tap to Call &middot; (475) 500-7126</a>
+<div class="ahp-sticky-bar"><a href="tel:+14755007126" class="ahp-sticky-call" aria-label="Call Alliance Handyman Pros now">Call (475) 500-7126</a><a href="sms:+14755007126" class="ahp-sticky-text" aria-label="Text Alliance Handyman Pros a photo for a price">Text us a photo for a price</a></div>
 <style>
-.ahp-sticky-call{display:none}
+.ahp-sticky-bar{display:none}
+.cta-buttons,.hero-ctas,.hero-btns,.closing-btns,.cta-row,.cta-btns{flex-wrap:wrap}
 @media(max-width:768px){
-  .ahp-sticky-call{display:flex;align-items:center;justify-content:center;gap:.5rem;position:fixed;left:0;right:0;bottom:0;z-index:99999;background:#f97316;color:#fff;font-family:'Oswald',sans-serif,-apple-system,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:1px;font-size:1.05rem;padding:1rem;text-decoration:none;box-shadow:0 -2px 14px rgba(0,0,0,.28)}
+  .ahp-sticky-bar{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:99999;box-shadow:0 -2px 14px rgba(0,0,0,.28)}
+  .ahp-sticky-call,.ahp-sticky-text{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;font-family:'Oswald',sans-serif,-apple-system,sans-serif;font-weight:700;text-transform:uppercase;letter-spacing:.5px;font-size:.85rem;line-height:1.25;padding:.8rem .6rem;min-height:64px;text-decoration:none}
+  .ahp-sticky-call{background:#f97316}
+  .ahp-sticky-text{background:#1a1a1a}
   body{padding-bottom:64px}
 }
 </style>
